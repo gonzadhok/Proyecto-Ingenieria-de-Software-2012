@@ -1,4 +1,4 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 3.4.10.1deb1
 -- http://www.phpmyadmin.net
 --
@@ -78,6 +78,7 @@ CREATE TABLE IF NOT EXISTS `FUNCIONARIO` (
   `apellidom` varchar(10) NOT NULL,
   `fono` decimal(10,0) NOT NULL,
   `correo` varchar(20) NOT NULL,
+  `clave` varchar(10) NOT NULL,
   `clase` varchar(1) NOT NULL,
   PRIMARY KEY (`rut`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;

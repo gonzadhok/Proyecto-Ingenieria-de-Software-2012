@@ -17,13 +17,14 @@
         $password=mysql_real_escape_string($password);
         
         
-        //consulta
+        //consulta a base de datos
         $querry="SELECT * FROM FUNCIONARIO WHERE rut=$usuario AND clave='$password'";
         $resultado=mysql_query($querry,$conexion);
         
         if(mysql_num_rows($resultado)==1)
         {
-            header("Location: Acceso.php");
+            $_SESSION[$usuario]=$password;
+            header("Location: Formulario.php");
         }
         else
        {
