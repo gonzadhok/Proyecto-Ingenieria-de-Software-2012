@@ -25,13 +25,15 @@
         }
         else
        {
-            header("Location: Login.html");
             menjase();
+            header("Location: Login.html");
+            
        }
     }else
     {
-        header("Location: Login.html");
         menjase();
+        header("Location: Login.html");
+        
     }
 
 ?>
