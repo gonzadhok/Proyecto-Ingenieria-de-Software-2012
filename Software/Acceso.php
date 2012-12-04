@@ -1,4 +1,5 @@
 <?php
-
+    sesion_start();
+    
 
 ?>

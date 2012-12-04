@@ -7,7 +7,7 @@ $pw = "software";
 function mensajedeerror()
 {
 ?>
-    <script>
+    <script languaje="Javascript">
         showDialog('Error','Usuario y/o Contraseña mal ingresados','error',2);
   </script>
 <?php
@@ -24,8 +24,8 @@ function campovacio($campos,$nombrecampos,$url) {
 
 function conectar()
 {
-    $con = mysql_connect($host, $user, $pw) or die("Error al conectar a Host");
-    mysql_select_db("base1", $con) or die("Error al conectar con base de datos");
+    $con = mysql_connect($host, $user, $pw);
+    mysql_select_db("base1", $con);
     return $con;
 }
 
@@ -35,8 +35,39 @@ function desconectar($con)
 }
 
 function validarrut($rut,$digito)
-{
-    return true;
+ {
+    $rut = intval($rut);
+    if ($rut != 0 && preg_match("0-9", $digito)) {
+        $digito = intvar($digito);
+
+        $multiplicador = 2;
+        $verificador = 0;
+
+        do {
+            $modulo = $rut % 10;
+            if ($multiplicador > 7)
+                $multiplicador = 2;
+            $aux3 += $modulo * $aux2;
+            $multiplicador++;
+            $rut = ($rut - $modulo) / 10;
+        } while ($rut != 0);
+
+        $verificador = 11 - ($verificador % 11); //calculo de guion
+
+        switch ($verificador) {
+            case 11: $verificador = 0;
+                break;
+            case 10: $verificador = "k";
+                break;
+        }
+
+        if ($verificador == $digito) {
+            return true;
+        } else {
+            return false;
+        }
+    }else
+        return false;
 }
 
 ?>
