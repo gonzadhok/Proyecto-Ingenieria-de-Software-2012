@@ -1,0 +1,2722 @@
+/*
+Theme Name: UTEM
+Theme URI: http:/www.utem.cl
+Description: Diseño de Página Corporativa de la Universidad Tecnológica Metropolitana UTEM, versión 2010.
+Author: David Carvajal
+Version: 1.1
+Tags: Universidad, Tecnológica, Metropolitana, Tecnología 
+*/
+
+
+@charset "utf-8";
+
+/* ---------------------------------------------------------------------------- */
+/* RESETEANDO ESTILOS EN NAVEGADORES DIFERENTES ------------------------------- */
+/* ---------------------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+body {
+	line-height: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	font-weight: normal;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after {
+	content: '';
+	content: none;
+}
+
+del {
+	text-decoration: line-through;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a img {
+	border: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* ---------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
+/* GENERALES ------------------------------------------------------------------ */
+/* ---------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------------------- */
+/* ESTRUCTURA ----------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
+
+body {
+	background: url(http://www.utem.cl/wp-content/themes/utem/images/bg-body.gif) repeat-x left top;
+	background-color: #fff;
+}
+
+#wrap {
+	width: 960px;
+	margin: 0 auto;
+}
+
+#contenedor {
+	float: left;
+	width: 960px;
+}
+
+#cabecera {
+	float: left;
+	height: 140px;
+	width: 960px;
+}
+
+#cabecera #i_corporativa {
+	width: 720px;
+	height: 139px;
+	display: inline;
+	float: left;
+}
+
+#cabecera #i_corporativa .log01 {
+	width: 340px;
+	height: 139px;
+	float: left;
+}
+
+#cabecera #i_corporativa .log02 {
+	width: 380px;
+	height: 139px;
+	float: left;
+}
+
+#contenido_superior {
+	float: left;
+	width: 960px;
+	height: 250px;
+}
+
+#contenido_superior #promocional {
+	float: left;
+	width: 720px;
+	height: 250px;
+}
+
+#contenido_superior #busqueda_rapida {
+	float: right;
+	width: 240px;
+	height: 250px;
+	background-color: #EEE;
+}
+
+#contenido_superior #busqueda_rapida #lista_carreras {
+	height: 58px;
+	width: 220px;
+	padding: 0 10px;
+	border-bottom: 1px solid #CCC;
+}
+
+#contenido_medio {
+	float: left;
+	width: 960px;
+	margin: 20px 0 19px 0;
+}
+
+#contenido_medio .mapa_sitio {
+	float: left;
+	width: 720px;
+}
+
+#contenedor #contenido_inferior {
+	float: left;
+	width: 960px;
+	background: #665c5c url(http://www.utem.cl/wp-content/themes/utem/images/bg-intranet.gif) repeat-y right top;	
+}
+
+#contenedor #pie_pagina {
+	font-size: 10px;
+	line-height: 16px;
+	color: #555;
+	height: 10px;
+	width: 960px;
+	padding: 5px 0 10px 0;
+	float: left;
+	position: relative;
+	display: block;
+}
+
+#contenido_inferior #acceso_intranet {
+	float: right;
+	width: 220px;
+	padding: 10px;
+	display: inline;
+}
+
+#contenido_inferior #contenido_inferior_enlaces {
+	float: left;
+	width: 720px;
+	padding: 10px 0;
+}
+
+#contenido_inferior #contenido_inferior_enlaces .enlaces {
+	display: inline;
+	margin: 0 10px;
+	float: left;
+	width: 220px;
+}
+
+#contenido_inferior #contenido_inferior_enlaces .logos {
+	display: inline;
+	margin: 0 10px;
+	float: left;
+	width: 460px;
+}
+
+#contenido_inferior #contenido_inferior_enlaces .logos .logos_internos,
+#contenido_inferior #contenido_inferior_enlaces .logos .logos_externos {
+	display: inline;
+	float: left;
+	width: 460px;
+}
+
+
+
+
+
+
+
+
+
+
+
+#contenido_inferior #contenido_inferior_enlaces .logos .logos_internos ul,
+#contenido_inferior #contenido_inferior_enlaces .logos .logos_externos ul {
+
+	width: 460px;
+	float: left;
+}
+
+
+#contenido_inferior #contenido_inferior_enlaces .logos .logos_internos ul li h2,
+#contenido_inferior #contenido_inferior_enlaces .logos .logos_externos ul li h2{
+	color: #9C9A9A;
+	padding: 5px 0;
+	border-bottom: 1px solid #9C9A9A;
+	font-size: 12px;
+	line-height: 12px;
+	font-weight: bold;
+}
+
+#contenido_inferior #contenido_inferior_enlaces .logos .logos_internos ul li ul,
+#contenido_inferior #contenido_inferior_enlaces .logos .logos_externos ul li ul {
+	padding: 5px 0 0 0;
+	width: 460px;
+	float: left;
+}
+
+
+
+#contenido_inferior #contenido_inferior_enlaces .logos .logos_internos ul li ul li,
+#contenido_inferior #contenido_inferior_enlaces .logos .logos_externos ul li ul li {
+	height: 60px;
+	width: 220px;
+	float: left;
+	padding: 5px 0;
+	font-size: 10px;
+	font-style: normal;
+	line-height: 10px;
+	font-weight: normal;
+	font-variant: normal;
+}
+
+#contenido_inferior #contenido_inferior_enlaces .logos .logos_internos ul li ul li a,
+#contenido_inferior #contenido_inferior_enlaces .logos .logos_externos ul li ul li a {
+	height: 35px;
+	color: #DDD;
+}
+
+#contenido_inferior #contenido_inferior_enlaces .logos .logos_internos ul li ul li a:hover,
+#contenido_inferior #contenido_inferior_enlaces .logos .logos_externos ul li ul li a:hover {
+	color: #9C0;
+}
+
+
+/* ---------------------------------------------------------------------------- */
+/* MENUS ---------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
+
+/* Menu superior -------------------------------------------------------------- */
+
+#menu_superior {
+	width: 960px;
+	height: 25px;
+	background-color: #036;
+	float: left;
+}
+
+#menu_superior ul {
+	width: 720px;
+	height: 25px;
+	float: left;
+	display: inline;
+}
+
+#menu_superior ul li {
+	text-align: center;
+	height: 25px;
+	display: inline;
+	float: left;
+	font-size: 11px;
+	font-style: normal;
+	line-height: 11px;
+	font-weight: normal;
+	font-variant: normal;
+}
+
+#menu_superior ul li a {
+	height: 11px;
+	padding: 7px 10px;
+	float: left;
+	color: #6FF;
+}
+
+#menu_superior li a:hover {
+	padding: 7px 10px;
+	color: #FFF;
+}
+
+/* Menu Perfil Usuarios ------------------------------------------------------- */
+
+#perfil_usuario {
+	width: 230px;
+	height: 140px;
+	float: right;
+}
+
+#perfil_usuario ul {
+	width: 220px;
+	padding-top: 22px;
+	float: left;
+}
+
+#perfil_usuario ul li {
+	height: 10px;
+	background: url(http://www.utem.cl/wp-content/themes/utem/images/bullet-usuario.gif) no-repeat left center;
+	padding: 3px 0 3px 10px;
+	font-size: 10px;
+	font-style: normal;
+	line-height: 10px;
+	font-weight: normal;
+	font-variant: normal;
+}
+
+#perfil_usuario ul li a {
+	height: 10px;
+}
+
+#perfil_usuario ul li a:hover {
+	padding-left: 2px;
+}
+
+/* Menus Laterales ------------------------------------------------------------ */
+
+#contenido_interior_carreras_vespertinas #destacados,
+#contenido_interior_carreras_diurnas #destacados,
+#contenido_interior #destacados {
+	float: right;
+	width: 230px;
+	display: block;
+	padding: 170px 0 0 0;
+}
+
+#contenido_interior #destacados_single {
+	float: right;
+	width: 230px;
+	display: block;
+	padding: 0;
+}
+
+#contenido_interior #sub_menu .fijo,
+#contenido_interior_carreras_vespertinas #sub_menu .fijo,
+#contenido_interior_carreras_diurnas #sub_menu .fijo,
+#contenido_interior #barra_lateral .fijo {
+	float: left;
+	width: 230px;
+}
+
+#contenido_interior #sub_menu .fijo h2,
+#contenido_interior_carreras_vespertinas #sub_menu .fijo h2,
+#contenido_interior_carreras_diurnas #sub_menu .fijo h2,
+#contenido_interior #destacados h2,
+#contenido_interior_carreras_vespertinas #destacados h2,
+#contenido_interior_carreras_diurnas #destacados h2,
+#contenido_interior #destacados_single h2,
+#contenido_interior #barra_lateral .fijo h2 {
+	font-size: 14px;
+	color: #036;
+	background-color: #f7f5ec;
+	float: left;
+	width: 210px;
+	padding: 10px 10px;
+		border-top: 2px solid #dad7d7;
+
+	border-bottom: 2px solid #dad7d7;
+}
+
+#contenido_interior #sub_menu .fijo h3,
+#contenido_interior_carreras_vespertinas #sub_menu .fijo h3,
+#contenido_interior_carreras_diurnas #sub_menu .fijo h3,
+#contenido_interior #destacados h3,
+#contenido_interior_carreras_vespertinas #destacados h3,
+#contenido_interior_carreras_diurnas #destacados h3,
+#contenido_interior #destacados_single h3,
+#contenido_interior #barra_lateral .fijo h3 {
+	font-size: 14px;
+	color: #036;
+	background-color: #f7f5ec;
+	float: left;
+	width: 210px;
+	padding: 10px 10px;
+	border-bottom: 2px solid #dad7d7;
+		border-top: 1px solid #dad7d7;
+
+}
+
+#contenido_interior #sub_menu .fijo ul,
+#contenido_interior_carreras_vespertinas #sub_menu .fijo ul,
+#contenido_interior_carreras_diurnas #sub_menu .fijo ul,
+#contenido_interior #barra_lateral .fijo ul,
+
+#contenido_interior #destacados_single ul,
+#contenido_interior_carreras_vespertinas #destacados ul,
+#contenido_interior_carreras_diurnas #destacados ul,
+#contenido_interior #destacados ul {
+	/*border-top: 1px solid #CCC;*/
+	width: 230px;
+	float: left;
+}
+
+#contenido_interior #sub_menu .fijo ul li ul,
+#contenido_interior #barra_lateral .fijo ul li ul,
+#contenido_interior_carreras_vespertinas #sub_menu .fijo ul li ul,
+#contenido_interior_carreras_diurnas #sub_menu .fijo ul li ul,
+
+#contenido_interior #destacados_single ul li ul,
+#contenido_interior_carreras_vespertinas #destacados ul li ul,
+#contenido_interior_carreras_diurnas #destacados ul li ul,
+#contenido_interior #destacados ul li ul {
+	/*border-top: 2px solid #CCC;*/
+	border: none;
+	width: 230px;
+	float: left;
+}
+
+#contenido_interior #sub_menu .fijo ul li ul li ul,
+#contenido_interior #barra_lateral .fijo ul li ul li ul,
+#contenido_interior_carreras_vespertinas #sub_menu .fijo ul li ul li ul,
+#contenido_interior_carreras_diurnas #sub_menu .fijo ul li ul li ul,
+
+#contenido_interior #destacados_single ul li ul li ul,
+#contenido_interior_carreras_vespertinas #destacados ul li ul li ul,
+#contenido_interior_carreras_diurnas #destacados ul li ul li ul,
+#contenido_interior #destacados ul li ul li ul {
+	/*border-top: 2px solid #CCC;*/
+		border: none;
+	width: 230px;
+	float: left;
+}
+
+
+#contenido_interior #sub_menu .fijo ul li ul li,
+#contenido_interior #sub_menu .fijo ul li ul li ul li,
+#contenido_interior #barra_lateral .fijo ul li ul li,
+#contenido_interior #barra_lateral .fijo ul li ul li ul li,
+#contenido_interior_carreras_vespertinas #sub_menu .fijo ul li ul li,
+#contenido_interior_carreras_vespertinas #sub_menu .fijo ul li ul li ul li,
+#contenido_interior_carreras_diurnas #sub_menu .fijo ul li ul li,
+#contenido_interior_carreras_diurnas #sub_menu .fijo ul li ul li ul li,
+
+#contenido_interior #destacados_single ul li ul li,
+#contenido_interior_carreras_vespertinas #destacados ul li ul li,
+#contenido_interior_carreras_diurnas #destacados ul li ul li,
+#contenido_interior #destacados ul li ul li,
+
+#contenido_interior #destacados_single ul li ul li ul li,
+#contenido_interior_carreras_vespertinas #destacados ul li ul li ul li,
+#contenido_interior_carreras_diurnas #destacados ul li ul li ul li,
+#contenido_interior #destacados ul li ul li ul li {
+	width: 230px;
+	display: block;
+	float: left;
+	border-top: 1px solid #dad7d7;
+	border-bottom: none;
+
+	font-size: 11px;
+	font-style: normal;
+	line-height: 14px;
+	font-weight: normal;
+	text-transform: none;
+}
+
+
+
+
+#contenido_interior #sub_menu .fijo ul li,
+#contenido_interior #barra_lateral .fijo ul li,
+#contenido_interior_carreras_vespertinas #sub_menu .fijo ul li,
+#contenido_interior_carreras_diurnas #sub_menu .fijo ul li,
+
+#contenido_interior #destacados_single ul li,
+#contenido_interior_carreras_vespertinas #destacados ul li,
+#contenido_interior_carreras_diurnas #destacados ul li,
+#contenido_interior #destacados ul li {
+	width: 230px;
+	display: block;
+	float: left;
+	border-bottom: 1px solid #dad7d7;
+	font-size: 10px;
+	font-style: normal;
+	line-height: 14px;
+	font-weight: normal;
+	text-transform: uppercase;	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#contenido_interior #sub_menu .fijo ul li a,
+#contenido_interior #barra_lateral .fijo ul li a,
+#contenido_interior_carreras_vespertinas #sub_menu .fijo ul li a,
+#contenido_interior_carreras_diurnas #sub_menu .fijo ul li a,
+
+#contenido_interior #destacados_single ul li a,
+#contenido_interior_carreras_vespertinas #destacados ul li a,
+#contenido_interior_carreras_diurnas #destacados ul li a,
+#contenido_interior #destacados ul li a {
+	padding: 3px 10px;
+	width: 210px;
+	float: left;
+	display: block;
+	color: #036;
+}
+
+
+
+#contenido_interior #sub_menu .fijo ul li ul li a,
+#contenido_interior #barra_lateral .fijo ul li ul li a,
+#contenido_interior_carreras_vespertinas #sub_menu .fijo ul li ul li a,
+#contenido_interior_carreras_diurnas #sub_menu .fijo ul li ul li a,
+
+#contenido_interior #destacados_single ul li ul li a,
+#contenido_interior_carreras_vespertinas #destacados ul li ul li a,
+#contenido_interior_carreras_diurnas #destacados ul li ul li a,
+#contenido_interior #destacados ul li ul li a {
+	padding: 3px 10px;
+	width: 210px;
+	float: left;
+	display: block;
+	color: #5C5555;
+}
+
+#contenido_interior #sub_menu .fijo ul li ul li ul li a,
+#contenido_interior #barra_lateral .fijo ul li ul li ul li a,
+#contenido_interior_carreras_vespertinas #sub_menu .fijo ul li ul li ul li a,
+#contenido_interior_carreras_diurnas #sub_menu .fijo ul li ul li ul li a,
+
+#contenido_interior #destacados_single ul li ul li ul li a,
+#contenido_interior_carreras_vespertinas #destacados ul li ul li ul li a,
+#contenido_interior_carreras_diurnas #destacados ul li ul li ul li a,
+#contenido_interior #destacados ul li ul li ul li a {
+	padding: 3px 20px;
+	width: 190px;
+	float: left;
+	display: block;
+	color: #5C5555;
+}
+
+
+
+
+#contenido_interior_oferta #destacados {
+	float: left;
+	width: 960px;
+	background-color:#9C0;
+}
+
+
+
+
+
+/* Diferencias barras laterales ----------------------------------------------- */
+
+#contenido_interior #sub_menu .fijo ul li a:hover,
+#contenido_interior #destacados ul li a:hover {
+	background-color: #DFDFDF;
+	color: #000;
+}
+
+#contenido_interior_carreras_vespertinas #sub_menu .fijo ul li a:hover,
+#contenido_interior_carreras_vespertinas #destacados ul li a:hover,
+#contenido_interior #barra_lateral .fijo ul li ul li a:hover,
+#contenido_interior #barra_lateral .fijo ul li a:hover  {
+	background-color: #DFDFDF;
+	color: #000;
+}
+
+#contenido_interior_carreras_diurnas #sub_menu .fijo ul li a:hover,
+#contenido_interior_carreras_diurnas #destacados ul li a:hover {
+	background-color: #DFDFDF;
+	color: #000;
+}
+
+/* Menu Mapa Sitio home ------------------------------------------------------- */
+
+#contenido_medio .mapa_sitio .area_sitio {
+	float: left;
+	width: 160px;
+	display: inline;
+	padding: 0 20px 20px 0;
+}
+
+#contenido_medio .mapa_sitio .area_sitio h2 {
+	font-size: 12px;
+	color: #666;
+	float: left;
+	width: 160px;
+	padding: 0 0 4px 0;
+	border-bottom: 2px solid #9C0;
+}
+
+#contenido_medio .mapa_sitio .area_sitio ul {
+	padding-top: 5px;
+	width: 160px;
+	float: left;
+}
+
+#contenido_medio .mapa_sitio .area_sitio ul li {
+	padding: 4px 0;
+	width: 160px;
+	background: url(http://www.utem.cl/wp-content/themes/utem/images/puntos-menumapa.gif) repeat-x left bottom;
+	font-size: 11px;
+	font-style: normal;
+	line-height: 14px;
+	font-weight: normal;
+	font-variant: normal;
+}
+
+#contenido_medio .mapa_sitio .area_sitio ul li a {
+	height: 11px;
+}
+
+/* Menu Inferior -------------------------------------------------------------- */
+
+#contenedor #menu_inferior {
+	float: left;
+	height: 20px;
+	width: 960px;
+	border-top: 1px solid #9C0;
+	border-bottom: 1px solid #9C0;
+	margin-bottom: 20px;
+}
+
+#contenedor #menu_inferior ul {
+	width: 960px;
+	height: 20px;
+	float: left;
+	display: inline;
+	background-image: url(http://www.utem.cl/wp-content/themes/utem/images/bg_diagonal.gif);
+	background-repeat: repeat;
+	background-position: left bottom;
+}
+
+#contenedor #menu_inferior ul li {
+	text-align: center;
+	height: 20px;
+	display: inline;
+	float: left;
+	font-size: 10px;
+	font-style: normal;
+	line-height: 10px;
+	font-weight: normal;
+	font-variant: normal;
+}
+
+#contenedor #menu_inferior ul li a {
+	height: 10px;
+	padding: 5px 10px 3px 10px;
+	float: left;
+	color: #444;
+}
+
+#contenedor #menu_inferior li a:hover {
+	color: #036;
+}
+
+/* ---------------------------------------------------------------------------- */
+/* Tipografía ----------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14px;
+	color: #393939;
+}
+
+ul {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#contenido ul li, #contenido_single ul li, #contenido_single_agenda ul li {
+	font: normal 14px/22px Georgia, "Times New Roman", Times, serif;
+	color: #393939;
+}
+
+#contenido ol li, #contenido_single ol li, #contenido_single_agenda ol li {
+	font: normal 14px/22px Georgia, "Times New Roman", Times, serif;
+	color: #393939;
+}
+
+a {
+	color: #036;
+}
+
+a:hover {
+	color: #09F;
+}
+
+#contenedor #pie_pagina, #lista_carreras form select, .noticia_h .contenido_noticia p, .noticia_i .contenido_noticia p {
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------------------------------- */
+/* Colores -------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
+
+
+
+#contenido_superior #busqueda_rapida #lista_carreras h2 {
+	font-size: 12px;
+	line-height: 12px;
+	color: #333;
+	float: left;
+	width: 220px;
+	padding: 10px 0 2px 0;
+	font-weight: bold;
+}
+#lista_carreras form {
+	display: inline;
+	float: left;
+	width: 220px;
+}
+#busqueda_rapida #agenda_home {
+	padding: 10px;
+	float: left;
+	height: 170px;
+	width: 220px;
+	border-top: 1px solid #FFF;
+}
+
+
+#lista_carreras form select {
+	color: #036;
+	background-color: #FFF;
+	font-size: 10px;
+	line-height: 20px;
+	height: 20px;
+	width: 218px;
+	border: 1px solid #CCC;
+}
+
+#busqueda_rapida #agenda_home h3 {
+	font-size: 12px;
+	text-align: center;
+	padding: 4px 0;
+	color: #fff;
+	line-height: 10px;
+	font-weight: bold;
+	float: left;
+	height: 10px;
+	width: 220px;
+	background: #036 url(http://www.utem.cl/wp-content/themes/utem/images/bg-tituloagenda.gif) repeat-x left top;
+}
+
+#agenda_home .contenedor_agenda {
+	float: left;
+	height: 140px;
+	margin-top: 10px;
+	width: 220px;
+	overflow: hidden;
+	overflow-y: scroll;
+	overflow: -moz-scrollbars-vertical;
+	background-color: #EEE;
+}
+
+
+#agenda_home .contenedor_agenda ul {
+	padding: 0 10px 10px 10px;
+	width: 180px;
+	float: left;
+}
+
+#agenda_home .contenedor_agenda ul li {
+	padding: 10px 0;
+	font-size: 11px;
+	font-style: normal;
+	line-height: 15px;
+	font-weight: normal;
+	font-variant: normal;
+	display: block;
+	float: left;
+	width: 180px;
+	margin: 0 0 3px 0;
+	background: url(http://www.utem.cl/wp-content/themes/utem/images/puntos-menuagenda.gif) repeat-x left bottom;
+	text-align: left;
+}
+
+#agenda_home .contenedor_agenda ul li p .fecha {
+margin-top: 4px;
+}
+
+#agenda_home .contenedor_agenda ul li p .fecha, #agenda_home .contenedor_agenda ul li p .hora, #agenda_home .contenedor_agenda ul li p .lugar {
+	color: #900;
+	display: block;
+	float: left;
+	height: 9px;
+	width: 170px;
+	background: #FFF url(http://www.utem.cl/wp-content/themes/utem/images/bullet-agenda.gif) no-repeat 4px center;
+	padding: 2px 0 2px 10px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	line-height: 9px;
+	font-weight: normal;
+	margin-bottom: 1px;
+}
+
+#contenido_medio #noticias_home {
+	background-color: #F2EBE7;
+	display: inline;
+	float: right;
+	width: 240px;
+}
+#contenido_medio #noticias_home .noticia_h h1 {
+	font-size: 12px;
+	line-height: 16px;
+	text-transform: uppercase;
+	padding: 0 0 5px 0;
+	float: left;
+	width: 220px;
+	font-weight: normal;
+}
+
+#contenido_medio #noticias_home .noticia_h {
+	padding: 10px;
+	float: left;
+	width: 220px;
+	border-bottom: 1px solid #FFF;
+}
+#contenido_inferior #acceso_intranet h2 {
+	font-size: 10px;
+	line-height: 10px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #333;
+	float: left;
+	width: 220px;
+	padding: 0 0 5px 0;
+	border-bottom: 1px solid #666;
+}
+#contenido_inferior #acceso_intranet form .membresia {
+	float: left;
+	width: 220px;
+}
+#contenido_inferior #acceso_intranet form .membresia .campo {
+	float: left;
+	width: 220px;
+	margin-top: 10px;
+}
+#acceso_intranet form .membresia .campo .col_01 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 9px;
+	line-height: 14px;
+	color: #333;
+	float: left;
+	width: 50px;
+}
+#acceso_intranet form .membresia .campo .col_02 {
+	float: right;
+	width: 170px;
+}
+
+#acceso_intranet form .membresia .campo .col_03 {
+	width: 220px;
+	padding: 10px 0 0;
+	text-align: center;
+	background-image: url(http://www.utem.cl/wp-content/themes/utem/images/puntos-menuagenda.gif);
+	background-repeat:  repeat-x;
+	background-position: left top;
+	margin-top: 5px;
+}
+
+#acceso_intranet form .membresia .campo .col_03 input {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FFF;
+	width: 130px;
+	border: none;
+	background-color: #006699;
+	margin: 0;
+}
+
+#acceso_intranet form .membresia .campo .col_02 input {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 10px;
+	margin: 0;
+	padding: 2px;
+	float: right;
+	width: 160px;
+	border: none;
+}
+
+#acceso_intranet form .membresia .campo .col_02 input:focus {
+	background-color: #FFC;
+
+}
+
+
+
+
+
+#menu_superior #buscador {
+	width: 220px;
+	height: 25px;
+	padding: 0 10px;
+	float: left;
+	display: inline;
+}
+
+#menu_superior #buscador #searchform {
+	padding: 0;
+	margin: 3px 0;
+	width: 220px;
+	height: 19px;
+	float: right;
+}
+
+#menu_superior #buscador #searchform #s {
+	width: 195px;
+	height: 17px;
+	padding: 0 2px;
+	border: 1px solid #9C0;
+	vertical-align: middle;
+	float: left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 17px;
+	color: #036;
+	background-color: #FFF;
+}
+
+#menu_superior #buscador #searchform #s:focus {
+	background-color: #FFC;
+}
+
+#menu_superior #buscador #searchform #searchsubmit {
+	width: 19px;
+	height: 19px;
+	margin: 0;
+	padding: 0;
+	border: none;
+	float: right;
+	background-color: #9C0;
+	font: bold 12px/12px Arial, Helvetica, sans-serif;
+	color: #FFF;
+	vertical-align: middle;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#contenido_interior #contenedor_busqueda {
+	display: inline;
+	float: right;
+	width: 670px;
+	padding: 20px;
+	background-color: #F7F3ED;
+}
+#contenido_interior #contenedor_busqueda h1 {
+	font-size: 18px;
+	font-weight: normal;
+	color: #666;
+	line-height: 130%;
+	display: block;
+	float: left;
+	width: 670px;
+	padding: 0 0 10px 0;
+	border-bottom: 1px solid #999;
+	margin: 0 0 30px 0;
+}
+#contenido_interior #contenedor_busqueda .resultado_busqueda {
+	float: left;
+	padding: 10px 0;
+	width: 670px;
+	background: url(http://www.utem.cl/wp-content/themes/utem/images/puntos-menuagenda.gif) repeat-x left bottom;
+	margin-bottom: 20px;
+}
+#contenido_interior #contenedor_busqueda .resultado_busqueda h2 {
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: normal;
+	color: #036;
+}
+
+#contenido_interior #contenedor_busqueda .resultado_busqueda .resultado_busqueda_fecha {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 12px;
+	color: #900;
+	float: left;
+	height: 12px;
+	width: 670px;
+	padding: 5px 0;
+}
+#contenido_interior #contenedor_busqueda .resultado_negativo {
+	float: left;
+	width: 670px;
+	padding: 20px 0;
+	background: url(http://www.utem.cl/wp-content/themes/utem/images/puntos-menuagenda.gif) repeat-x left bottom;
+}
+#contenido_interior #contenedor_busqueda .resultado_negativo h3 {
+	font-size: 14px;
+	color: #777;
+	float: left;
+	width: 670px;
+	padding: 0 0 10px 0;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+#contenido_interior #contenedor_busqueda .resultado_negativo p {
+	line-height: 18px;
+	float: left;
+	width: 670px;
+	padding: 10px 0;
+}
+
+#contenido_interior #barra_lateral {
+	float: left;
+	width: 230px;
+	margin: 0 10px 0 0;
+	display: block;
+
+}
+
+#noticias_home .noticia_h .contenido_noticia .cabecera_tema_noticias {
+	float: left;
+	height: 110px;
+	width: 220px;
+	background-color:#000;
+}
+#noticias_home .noticia_h .contenido_noticia .cabecera_tema_noticias img {
+	height: 110px;
+	width: 220px;
+}
+#noticias_home .noticia_h .contenido_noticia {
+	float: left;
+	width: 220px;
+}
+
+.noticia_h .contenido_noticia p {
+	font-size: 9px;
+	line-height: 9px;
+	font-weight: normal;
+	color: #036;
+	float: left;
+	height: 9px;
+	width: 220px;
+	padding: 5px 0 0 0;
+	display: block;
+}
+
+.noticia_h .contenido_noticia .ocultar {
+	display: none;
+}
+
+#contenido_inferior #contenido_inferior_enlaces .enlaces ul {
+
+	width: 220px;
+	float: left;
+}
+
+
+#contenido_inferior #contenido_inferior_enlaces .enlaces ul li h2{
+	color:#9C0;
+	padding: 5px 0;
+	border-bottom: 1px solid #9C0;
+	font-size: 12px;
+	line-height: 12px;
+	font-weight: bold;
+}
+
+#contenido_inferior #contenido_inferior_enlaces .enlaces ul li ul {
+	padding: 5px 0 0 0;
+	width: 220px;
+	float: left;
+}
+
+
+
+#contenido_inferior #contenido_inferior_enlaces .enlaces ul li ul li {
+	padding: 5px 0;
+	background: url(http://www.utem.cl/wp-content/themes/utem/images/puntos-menuenlaces.gif) repeat-x left bottom;
+	font-size: 10px;
+	font-style: normal;
+	line-height: 14px;
+	font-weight: normal;
+	font-variant: normal;
+}
+
+#contenido_inferior_enlaces .enlaces ul li ul li a {
+	height: 12px;
+	color: #DDD;
+}
+
+#contenido_inferior_enlaces .enlaces ul li ul li a:hover {
+	color: #9C0;
+}
+
+/* =Comments
+-------------------------------------------------------------- */
+.comentarios_post #comments {
+	clear: both;
+}
+.comentarios_post #comments .navigation {
+	padding: 0 0 18px 0;
+}
+.comentarios_post h3#comments-title,
+.comentarios_post h3#reply-title,
+.comentarios_post h3 {
+	color: #000;
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 0;
+}
+.comentarios_post h3#comments-title {
+	padding: 24px 0;
+}
+.comentarios_post .commentlist {
+	margin: 0;
+}
+.comentarios_post .commentlist li.comment {
+	border-bottom: 1px solid #e7e7e7;
+	line-height: 24px;
+	margin: 0 0 24px 0;
+	padding: 0 0 0 56px;
+	position: relative;
+}
+.comentarios_post .commentlist li:last-child {
+	border-bottom: none;
+	margin-bottom: 0;
+}
+.comentarios_post #comments .comment-body ul,
+.comentarios_post #comments .comment-body ol {
+	margin-bottom: 18px;
+}
+.comentarios_post #comments .comment-body p:last-child {
+	margin-bottom: 6px;
+}
+.comentarios_post #comments .comment-body blockquote p:last-child {
+	margin-bottom: 24px;
+}
+.comentarios_post .commentlist ol {
+	list-style: decimal;
+}
+.comentarios_post .commentlist .avatar {
+	position: absolute;
+	top: 4px;
+	left: 0;
+}
+.comentarios_post .comment-author {
+}
+.comentarios_post .comment-author cite {
+	color: #000;
+	font-style: normal;
+	font-weight: bold;
+}
+.comentarios_post .comment-author .says {
+	font-style: italic;
+}
+.comentarios_post .comment-meta {
+	font-size: 12px;
+	margin: 0 0 18px 0;
+}
+.comentarios_post .comment-meta a:link,
+.comentarios_post .comment-meta a:visited {
+	color: #888;
+	text-decoration: none;
+}
+.comentarios_post .comment-meta a:active,
+.comentarios_post .comment-meta a:hover {
+	color: #ff4b33;
+}
+.comentarios_post .commentlist .even {
+}
+.comentarios_post .commentlist .bypostauthor {
+}
+.comentarios_post .reply {
+	font-size: 12px;
+	padding: 0 0 24px 0;
+}
+.comentarios_post .reply a,
+.comentarios_post a.comment-edit-link {
+	color: #888;
+}
+.comentarios_post .reply a:hover,
+.comentarios_post a.comment-edit-link:hover {
+	color: #ff4b33;
+}
+.comentarios_post .commentlist .children {
+	margin: 0;
+}
+.comentarios_post .commentlist .children li {
+	border: none;
+	margin: 0;
+}
+.comentarios_post .nopassword,
+.comentarios_post .nocomments {
+	display: none;
+}
+.comentarios_post #comments .pingback {
+	border-bottom: 1px solid #e7e7e7;
+	margin-bottom: 18px;
+	padding-bottom: 18px;
+}
+.comentarios_post .commentlist li.comment+li.pingback {
+	margin-top: -6px;
+}
+.comentarios_post #comments .pingback p {
+	color: #888;
+	display: block;
+	font-size: 12px;
+	line-height: 18px;
+	margin: 0;
+}
+.comentarios_post #comments .pingback .url {
+	font-size: 13px;
+	font-style: italic;
+}
+
+/* Comments form */
+.comentarios_post input[type=submit] {
+	color: #000;
+}
+.comentarios_post #respond {
+	border-top: 1px solid #e7e7e7;
+	margin: 24px 0;
+	overflow: hidden;
+	position: relative;
+}
+.comentarios_post #respond p {
+	margin: 0;
+}
+.comentarios_post #respond .comment-notes {
+	margin-bottom: 1em;
+}
+.comentarios_post .form-allowed-tags {
+
+	line-height: 1em;
+}
+.comentarios_post .children #respond {
+	margin: 0 48px 0 0;
+}
+.comentarios_post h3#reply-title {
+	margin: 18px 0;
+}
+.comentarios_post #comments-list #respond {
+	margin: 0 0 18px 0;
+}
+.comentarios_post #comments-list ul #respond {
+	margin: 0;
+}
+.comentarios_post #cancel-comment-reply-link {
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 18px;
+}
+.comentarios_post #respond .required {
+	color: #ff4b33;
+	font-weight: bold;
+}
+.comentarios_post #respond label {
+	color: #888;
+	font-size: 12px;
+}
+.comentarios_post #respond input {
+	margin: 0 0 9px;
+	width: 98%;
+}
+.comentarios_post #respond textarea {
+	width: 98%;
+}
+.comentarios_post #respond .form-allowed-tags {
+	color: #888;
+	font-size: 12px;
+	line-height: 18px;
+}
+.comentarios_post #respond .form-allowed-tags code {
+	font-size: 11px;
+}
+.comentarios_post #respond .form-submit {
+	margin: 12px 0;
+}
+.comentarios_post #respond .form-submit input {
+	font-size: 14px;
+	width: auto;
+}
+
+/* = FIN Comments
+-------------------------------------------------------------- */
+
+#contenido_interior #contenido_single {
+	display: inline;
+	float: left;
+	width: 420px;
+	margin-top: 230px;
+	margin-left: 10px;
+	position: relative;
+	padding: 19px;
+	border-right: 1px solid #dfdfdf;
+	border-bottom: 1px solid #dfdfdf;
+	border-left: 1px solid #dfdfdf;
+}
+
+#contenido_interior #contenido_single p {
+	line-height: 22px;
+	text-align: justify;
+	margin: 15px 0 0 0;
+	width: 420px;
+}
+
+#contenido_interior #contenido_single p .destacado {
+	color: #900;
+	font-style: italic;
+}
+
+#contenido_interior #contenido_single h1 {
+	width: 420px;
+	font-size: 24px;
+	line-height: 32px;
+	font-weight: normal;
+	color: #036;
+	padding: 30px 0 10px 0;
+
+}
+
+#contenido_interior #contenido_single h2 {
+	width: 420px;
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: normal;
+	color: #036;
+	padding: 20px 0 0 0;
+}
+
+#contenido_interior #contenido_single h3 {
+	width: 420px;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: normal;
+	color: #777;
+	padding: 20px 0 0 0;
+}
+
+#contenido_interior #contenido_single ul {
+	padding-top: 10px;
+	width: 420px;
+}
+
+#contenido_interior #contenido_single .resultado_negativo {
+	width: 420px;
+	padding: 20px 0;
+	background: url(http://www.utem.cl/wp-content/themes/utem/images/puntos-menuagenda.gif) repeat-x left bottom;
+}
+#contenido_interior #contenido_single .resultado_negativo h3 {
+	font-size: 14px;
+	color: #777;
+	width: 420px;
+	padding: 0 0 10px 0;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+#contenido_interior #contenido_single .resultado_negativo p {
+	line-height: 22px;
+	width: 420px;
+	padding: 0 0 10px 0;
+}
+
+#contenido_interior #contenido_single .meta_datos {
+	width: 420px;
+	background: url(http://www.utem.cl/wp-content/themes/utem/images/bg_diagonal.gif) repeat left bottom;
+	float: left;
+	margin: 0 0 20px 0;
+}
+#contenido_interior #contenido_single .meta_datos .categoria_post {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	line-height: 14px;
+	width: 400px;
+	padding: 5px 10px 5px 10px;
+	background-color:#9C0;
+	color:#FFF;
+	float: left;
+}
+
+
+#contenido_single .meta_datos .categoria_post a {
+	color: #FFFF00;
+	text-decoration: underline;
+}
+
+#contenido_single .meta_datos .categoria_post a:hover {
+	color: #036;
+}
+
+#contenido_interior #contenido_single .meta_datos .calendario_post {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	line-height: 10px;
+	height: 10px;
+	padding: 5px 10px 3px 10px;
+	background-color:#FFF;
+	color:#036;
+	float: left;
+	display: inline;
+	border: 1px solid #9C0;
+}
+
+#wrap #contenedor #contenido_interior #contenido_single p .fecha,
+#wrap #contenedor #contenido_interior #contenido_single p .hora,
+#wrap #contenedor #contenido_interior #contenido_single p .lugar {
+	line-height: 14px;
+	color: #900;
+	background: url(http://www.utem.cl/wp-content/themes/utem/images/puntos-menuagenda.gif) repeat-x left bottom;
+	display: block;
+	width: 400px;
+	padding: 10px 10px 5px 10px;
+}
+
+
+#contenido_single .cabecera_tema_noticias {
+	float: left;
+	height: 230px;
+	width: 460px;
+	position: absolute;
+	top: -230px;
+	left: -1px;
+	background-color:#000;
+}
+
+#contenido_interior #contenido_single_agenda {
+	display: inline;
+	float: left;
+	width: 420px;
+	padding: 19px;
+	border: 1px solid #dfdfdf;
+	margin-left: 10px;
+}
+
+#contenido_interior #contenido_single_agenda p {
+	line-height: 22px;
+	text-align: justify;
+	margin: 10px 0 0 0;
+	float: left;
+	width: 420px;
+}
+
+#contenido_interior #contenido_single_agenda p .destacado {
+	color: #900;
+	font-style: italic;
+}
+
+#contenido_interior #contenido_single_agenda h1 {
+	width: 420px;
+	float: left;
+	font-size: 24px;
+	line-height: 32px;
+	font-weight: normal;
+	color: #036;
+	padding: 0 0 10px 0;
+}
+
+
+#contenido_interior #contenido_single_agenda h2 {
+	width: 420px;
+	float: left;
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: normal;
+	color: #036;
+	padding: 20px 0 0 0;
+}
+
+#contenido_interior #contenido_single_agenda h3 {
+	width: 420px;
+	float: left;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: normal;
+	color: #036;
+	padding: 20px 0 0 0;
+}
+
+#contenido_interior #contenido_single_agenda ul {
+	padding-top: 10px;
+	float: left;
+	width: 420px;
+}
+
+
+
+#contenido_interior #contenido_single_agenda .resultado_negativo {
+	float: left;
+	width: 420px;
+	padding: 20px 0;
+	background: url(http://www.utem.cl/wp-content/themes/utem/images/puntos-menuagenda.gif) repeat-x left bottom;
+}
+#contenido_interior #contenido_single_agenda .resultado_negativo h3 {
+	font-size: 14px;
+	color: #777;
+	float: left;
+	width: 420px;
+	padding: 0 0 10px 0;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+#contenido_interior #contenido_single_agenda .resultado_negativo p {
+	line-height: 22px;
+	float: left;
+	width: 420px;
+	padding: 0 0 10px 0;
+}
+
+#contenido_interior #contenido_single_agenda .meta_datos {
+	float: left;
+	width: 420px;
+	height: 20px;
+	background: url(http://www.utem.cl/wp-content/themes/utem/images/bg_diagonal.gif) repeat left top;
+}
+#contenido_interior #contenido_single_agenda .meta_datos .categoria_post {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	line-height: 10px;
+	height: 10px;
+	padding: 6px 10px 4px 10px;
+	background-color:#9C0;
+	color:#FFF;
+	display: inline;
+	float: left;
+}
+
+#contenido_interior #contenido_single_agenda .meta_datos .categoria_post a {
+	color: #FFF;
+	text-decoration: underline;
+}
+
+#contenido_interior #contenido_single_agenda .meta_datos .categoria_post a:hover {
+	color: #036;
+}
+
+#contenido_interior #contenido_single_agenda .meta_datos .calendario_post {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	line-height: 10px;
+	height: 10px;
+	padding: 5px 10px 3px 10px;
+	background-color:#FFF;
+	color:#036;
+	float: left;
+	display: inline;
+	border: 1px solid #9C0;
+}
+
+#wrap #contenedor #contenido_interior #contenido_single_agenda p .fecha,
+#wrap #contenedor #contenido_interior #contenido_single_agenda p .hora,
+#wrap #contenedor #contenido_interior #contenido_single_agenda p .lugar {
+	line-height: 14px;
+	color: #900;
+	background: url(http://www.utem.cl/wp-content/themes/utem/images/puntos-menuagenda.gif) repeat-x left bottom;
+	display: block;
+	width: 400px;
+	padding: 10px 10px 5px 10px;
+}
+
+#contenido_interior_oferta {
+	float: left;
+	width: 960px;
+	padding-bottom: 20px;
+}
+
+
+#contenido_interior_oferta #contenido {
+	width: 960px;
+	float: left;
+	display: block;
+	position: relative;
+	margin-top: 150px;
+}
+
+#contenido_interior_oferta #contenido h1 {
+	font-size: 36px;
+	line-height: 36px;
+	font-weight: normal;
+	color: #666;
+	padding: 20px 10px;
+	width: 940px;
+}
+
+#contenido_interior_oferta #contenido h2 {
+	font-size: 14px;
+	line-height: 14px;
+	font-weight: normal;
+	color: #FFF;
+	width: 820px;
+	background-color: #09C;
+	height: 14px;
+	padding: 5px 70px;
+}
+
+#contenido_interior_oferta #contenido .cabecera_tema {
+	width: 960px;
+	height: 150px;
+	float: left;
+	
+	position: absolute;
+	top: -150px;
+	left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#contenido_interior #sub_menu,
+#contenido_interior_carreras_diurnas #sub_menu,
+#contenido_interior_carreras_vespertinas #sub_menu {
+	float: left;
+	width: 230px;
+	padding: 170px 0 0 0;
+}
+
+#contenido_interior_carreras_diurnas,
+#contenido_interior_carreras_vespertinas,
+#contenido_interior {
+	float: left;
+	width: 960px;
+	padding: 0 0 20px 0;
+	position: relative;
+	overflow: hidden;
+}
+
+#contenido_interior_carreras_diurnas #contenido,
+#contenido_interior_carreras_vespertinas #contenido,
+#contenido_interior #contenido {
+	display: inline;
+	float: left;
+	width: 640px;
+	padding: 20px;
+	position: relative;
+	border-bottom: 2px solid #5C5555;
+	background-color: #f7f5ec;
+	left: 128px;
+	top: -53px;
+	margin-top: 170px;
+	margin-right: 20px;
+	margin-bottom: 0;
+	margin-left: 20px;
+}
+
+#contenido_interior_carreras_diurnas #contenido p,
+#contenido_interior_carreras_vespertinas #contenido p,
+#contenido_interior #contenido p {
+	line-height: 24px;
+	text-align: justify;
+	margin: 15px 0 0 0;
+	width: 420px;
+}
+
+#contenido_interior_carreras_diurnas #contenido p .destacado,
+#contenido_interior_carreras_vespertinas #contenido p .destacado,
+#contenido_interior #contenido p .destacado,
+#contenido_interior_carreras_diurnas #contenido p u,
+#contenido_interior_carreras_vespertinas #contenido u,
+#contenido_interior #contenido u {
+	color: #069;
+	padding-bottom: 2px;
+	display: inline;
+	background-image: url(http://www.utem.cl/wp-content/themes/utem/images/puntos-menumapa.gif);
+	background-repeat: repeat-x;
+	background-position: bottom;
+	text-decoration: none;
+}
+
+#contenido_interior_carreras_diurnas #contenido h1,
+#contenido_interior_carreras_vespertinas #contenido h1,
+#contenido_interior #contenido h1 {
+	width: 640px;
+	font-size: 24px;
+	line-height: 28px;
+	font-weight: normal;
+	color: #333;
+	margin-bottom: 10px;
+	padding-top: 10px;
+	padding-right: 0;
+	padding-bottom: 10px;
+	padding-left: 0;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #099;
+}
+
+#contenido_interior_carreras_diurnas #contenido h2,
+#contenido_interior_carreras_vespertinas #contenido h2,
+#contenido_interior #contenido h2 {
+	width: 420px;
+	font-size: 18px;
+	line-height: 22px;
+	font-weight: normal;
+	color: #036;
+	padding: 30px 0 10px 0;
+}
+
+#contenido_interior_carreras_diurnas #contenido h3,
+#contenido_interior_carreras_vespertinas #contenido h3,
+#contenido_interior #contenido h3 {
+	width: 420px;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: normal;
+	color: #036;
+	padding: 30px 0 0 0;
+}
+
+#contenido_interior_carreras_diurnas #contenido h4,
+#contenido_interior_carreras_vespertinas #contenido h4,
+#contenido_interior #contenido h4 {
+	width: 420px;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: normal;
+	color: #036;
+	padding: 30px 0 0 0;
+}
+#contenido_interior_carreras_diurnas #contenido h5,
+#contenido_interior_carreras_vespertinas #contenido h5,
+#contenido_interior #contenido h5 {
+	width: 420px;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: normal;
+	color: #036;
+	padding: 30px 0 0 0;
+}
+#contenido_interior_carreras_diurnas #contenido h6,
+#contenido_interior_carreras_vespertinas #contenido h6,
+#contenido_interior #contenido h6 {
+	width: 420px;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: normal;
+	color: #036;
+	padding: 30px 0 0 0;
+}
+
+#contenido_interior_carreras_diurnas #contenido ul,
+#contenido_interior_carreras_vespertinas #contenido ul,
+#contenido_interior #contenido ul,
+#contenido_interior_carreras_diurnas #contenido ol,
+#contenido_interior_carreras_vespertinas #contenido ol,
+#contenido_interior #contenido ol {
+	width: 420px;
+	padding-top: 10px;
+}
+
+
+#contenido_interior_carreras_diurnas #contenido ol,
+#contenido_interior_carreras_vespertinas #contenido ol,
+#contenido_interior #contenido ol {
+	list-style-type: lower-alpha;
+	list-style-position: inside;
+}
+#contenido_interior_carreras_diurnas #contenido ul,
+#contenido_interior_carreras_vespertinas #contenido ul,
+#contenido_interior #contenido ul {
+	list-style-type: disc;
+	list-style-position: inside;
+}
+
+
+
+
+#contenido_interior_carreras_diurnas #contenido .cabecera_tema,
+#contenido_interior_carreras_vespertinas #contenido .cabecera_tema,
+#contenido_interior #contenido .cabecera_tema {
+	float: left;
+	height: 150px;
+	width: 960px;
+	
+	position: absolute;
+	top: -171px;
+	left: -250px;
+	background-color:#000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#noticias_internas {
+	background-color: #F2EBE7;
+	display: inline;
+	float: left;
+	width: 230px;
+}
+
+#noticias_internas .noticia_i h1 {
+	font-size: 12px;
+	line-height: 16px;
+	text-transform: uppercase;
+	padding: 0 0 5px 0;
+	float: left;
+	width: 210px;
+	font-weight: normal;
+}
+
+#noticias_internas .noticia_i {
+	padding: 10px;
+	float: left;
+	width: 210px;
+	border-bottom: 1px solid #FFF;
+}
+
+#noticias_internas .noticia_i .contenido_noticia .cabecera_tema_noticias {
+	float: left;
+	height: 105px;
+	width: 210px;
+	background-color:#000;
+}
+#noticias_internas .noticia_i .contenido_noticia .cabecera_tema_noticias img {
+	height: 105px;
+	width: 210px;
+}
+#noticias_internas .noticia_i .contenido_noticia {
+	float: left;
+	width: 210px;
+}
+
+#noticias_internas .noticia_i .contenido_noticia .ocultar {
+	display: none;
+}
+
+.contenedor_agenda .ocultar {
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#contenido_interior #contenido_oferta {
+	display: inline;
+	float: left;
+	width: 710px;
+	padding: 20px 0px;
+	margin: 170px 0 0 20px;
+	position: relative;
+	border-bottom: 2px solid #5C5555;
+	background-color: #f7f5ec;
+}
+
+#contenido_interior #contenido_oferta .cabecera_tema {
+	float: left;
+	height: 150px;
+	width: 960px;
+	
+	position: absolute;
+	top: -171px;
+	left: -250px;
+	background-color:#000;
+}
+
+
+
+
+
+#contenido_interior #contenido_oferta .dividir {
+	width: 710px;
+	background-color: #F7F3ED;
+	display: block;
+}
+
+#contenido_interior #contenido_oferta .dividir h2 {
+	width: 670px;
+	background-color: #06C;
+	display: block;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 14px;
+	color: #FFF;
+	height: 14px;
+	padding-top: 5px;
+	padding-right: 20px;
+	padding-bottom: 5px;
+	padding-left: 20px;
+	margin: 10px 0;
+	text-transform: uppercase;
+	text-align: left;
+}
+
+#contenido_interior #contenido_oferta h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 36px;
+	line-height: 36px;
+	font-weight: normal;
+	color: #666;
+	height: 36px;
+	width: 670px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+}
+
+#contenido_interior #contenido_oferta .dividir ul {
+	padding: 20px 10px;
+	width: 690px;
+	display: block;
+	float: left;
+}
+#contenido_interior #contenido_oferta .dividir ul li {
+	padding: 5px 0;
+	width: 325px;
+	height: 32px;
+	float: left;
+	margin: 0 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333;
+	line-height: 16px;
+	background: url(http://www.utem.cl/wp-content/themes/utem/images/puntos-menuagenda.gif) repeat-x left bottom;
+	vertical-align: middle;
+	display: inline;
+}
+
+
+
+
+
+
+#menu_areas {
+	float: left;
+	height: 40px;
+	width: 960px;
+}
+
+#menu_areas ul {
+	float: left;
+	height: 40px;
+	width: 960px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 14px;
+	font-weight: normal;
+	letter-spacing: 1px;
+	color: #333333;
+}
+
+#menu_areas ul li {
+	float: left;
+	height: 14px;
+	padding: 13px 0;
+}
+
+#menu_areas ul li.separador {
+	padding: 13px 15px;
+	color:#999;
+}
+
+#menu_areas ul li a {
+	height: 14px;
+}
+
+.geo {
+display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#contenido_interior #destacados_aranceles {
+	float: right;
+	width: 230px;
+	display: block;
+	padding: 170px 0 0 0;
+}
+#contenido_interior #destacados_aranceles #noticias_internas {
+	background-color: #fff;
+	display: inline;
+	float: left;
+	width: 230px;
+}
+
+
+.form_aranceles {
+	float: left;
+	width: 228px;
+	margin-bottom: 10px;
+	border: 1px solid #999999;
+	padding-bottom: 10px;
+}
+.form_aranceles h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 14px;
+	color: #FFFFFF;
+	background-color: #99CC00;
+	text-align: center;
+	height: 14px;
+	width: 228px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	letter-spacing: 1px;
+	font-weight: bold;
+}
+
+.form_aranceles p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+	color: #333333;
+	float: left;
+	width: 210px;
+	padding: 9px;
+}
+
+.form_aranceles form .membresia {
+	float: left;
+	width: 228px;
+}
+.form_aranceles form .membresia .campo {
+	float: left;
+	width: 210px;
+	padding: 0 9px;
+	margin-top: 10px;
+}
+.form_aranceles form .membresia .campo .col_01 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 9px;
+	line-height: 14px;
+	color: #333;
+	float: left;
+	width: 50px;
+	font-weight: bold;
+}
+.form_aranceles form .membresia .campo .col_02 {
+	float: right;
+	width: 160px;
+}
+
+.form_aranceles form .membresia .campo .col_03 {
+	width: 228px;
+	padding: 10px 0 0;
+	text-align: center;
+	background-image: url(http://www.utem.cl/wp-content/themes/utem/images/puntos-menuagenda.gif);
+	background-repeat:  repeat-x;
+	background-position: left top;
+	margin-top: 5px;
+}
+
+.form_aranceles form .membresia .campo .col_03 input {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FFF;
+	width: 120px;
+	border: none;
+	background-color: #006699;
+	margin: 0;
+}
+
+.form_aranceles form .membresia .campo .col_02 input {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 10px;
+	margin: 0;
+	padding: 2px;
+	float: right;
+	width: 150px;
+	border: none;
+	background-color:#DDD;
+}
+
+.form_aranceles form .membresia .campo .col_02 input:focus {
+	background-color: #FFC;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#contenido .ponderaciones {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	line-height: 14px;
+	color: #333333;
+	width: 420px;
+	background-color: #eee;
+	margin: 10px 0 5px 0;
+}
+
+#contenido .ponderaciones tr td {
+	padding: 8px 5px;
+	text-align: center;
+}
+
+#contenido .ponderaciones tr td.tit {
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #006600;
+	letter-spacing: 3px;
+}
+
+#contenido .ponderaciones tr td.prim_niv {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #999999;
+}
+#contenido .ponderaciones tr td.prim_niv_der {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #999999;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #999999;
+}
+#contenido .ponderaciones tr td.seg_niv {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #999999;
+	background-color:#FFFFFF;
+}
+#contenido .ponderaciones tr td.seg_niv_der {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #999999;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #999999;
+	background-color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.formularios {
+	float: left;
+	width: 420px;
+}
+
+form .error_formu {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: normal;
+	color: #CC0000;
+	background-color: #FFFFFF;
+	padding: 10px;
+	float: left;
+	width: 398px;
+	border: 1px solid #FF0000;
+}
+
+.formularios span {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	line-height: 9px;
+	font-weight: normal;
+	color: #CC0000;
+	padding-top: 5px;
+	padding-bottom: 8px;
+}
+
+.formularios .campo_envio {
+	float: left;
+	width: 420px;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.formularios .entrada {
+	float: left;
+	width: 420px;
+	padding-top: 15px;
+	padding-bottom: 25px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #003366;
+}
+
+.formularios .entrada .tit_ini {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: normal;
+	color: #003366;
+	float: left;
+	width: 420px;
+	padding-top: 10px;
+}
+
+.formularios .entrada .desc_campo_ini {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	color: #454545;
+	float: left;
+	width: 420px;
+	padding-top: 5px;
+}
+
+.formularios .entrada .desc_campo {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+	color: #990000;
+	float: left;
+	width: 420px;
+	padding-bottom: 5px;
+	padding-top: 10px;
+}
+
+.formularios .entrada .campo {
+	float: left;
+	width: 420px;
+}
+
+.formularios .entrada .tit_uno {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 20px;
+	color: #003366;
+	float: left;
+	width: 420px;
+	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.formularios .entrada .tit_dos {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	color: #003366;
+	float: left;
+	width: 420px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	font-weight: bold;
+}
+
+.formularios .entrada .opciones_certificado {
+	float: left;
+	width: 420px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+
+
+
+
+.formularios .entrada .campo input {
+	float: left;
+	width: 418px;
+	border: 1px solid #009999;
+}
+
+.formularios .entrada .campo textarea {
+	float: left;
+	width: 418px;
+	border: 1px solid #009999;
+	height: 100px;
+}
+
+.formularios .entrada .campo select {
+	float: left;
+	border: 1px solid #009999;
+}
+
+.formularios .entrada .opciones_certificado label {
+	float: left;
+	width: 420px;
+	padding-top: 5px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #990000;
+}
+
+.formularios .entrada .opciones_certificado label span {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #990000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#contenido_medio #noticias_prin_home {
+	background-color: #F2EBE7;
+	display: block;
+	float: left;
+	width: 960px;
+	margin-bottom: 10px;
+}
+
+#contenido_medio #noticias_prin_home .noticia_h h1 {
+	font-size: 12px;
+	line-height: 16px;
+	text-transform: uppercase;
+	padding: 0 0 5px 0;
+	float: left;
+	width: 220px;
+	font-weight: normal;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #333333;
+	letter-spacing: 1px;
+}
+
+#contenido_medio #noticias_prin_home .noticia_h {
+	padding: 9px;
+	float: left;
+	width: 220px;
+	height: 190px;
+	border-left-width: 2px;
+	border-left-style: solid;
+	border-left-color: #FFFFFF;
+}
+
+#noticias_prin_home .noticia_h .contenido_noticia .cabecera_tema_noticias {
+	float: left;
+	height: 110px;
+	width: 220px;
+	background-color:#000;
+}
+
+#noticias_prin_home .noticia_h .contenido_noticia .cabecera_tema_noticias img {
+	height: 110px;
+	width: 220px;
+}
+
+#noticias_prin_home .noticia_h .contenido_noticia {
+	float: left;
+	width: 220px;
+}
+
+
+
+
+
+
+
+
+
+
+#contenido_medio #noticias_prin_home .noticia_red h1 {
+	font-size: 12px;
+	line-height: 16px;
+	text-transform: uppercase;
+	padding: 0 0 5px 0;
+	float: left;
+	width: 220px;
+	font-weight: normal;
+}
+
+#contenido_medio #noticias_prin_home .noticia_red {
+	padding: 10px;
+	float: left;
+	width: 220px;
+	height: 190px;
+	background-color: #FFCC00;
+}
+
+#noticias_prin_home .noticia_red .contenido_noticia .cabecera_tema_noticias {
+	float: left;
+	height: 110px;
+	width: 220px;
+	background-color:#000;
+}
+
+#noticias_prin_home .noticia_red .contenido_noticia .cabecera_tema_noticias img {
+	height: 110px;
+	width: 220px;
+}
+
+#noticias_prin_home .noticia_red .contenido_noticia {
+	float: left;
+	width: 220px;
+}
+
+.noticia_red .contenido_noticia .ocultar {
+	display: none;
+}
+
+#uestatales {
+	float: left;
+	width: 728px;
+	height: 90px;
+	text-align: center;
+	padding: 0 116px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#contenido_medio #noticias_home .banner_home01 {
+	padding: 10px;
+	float: left;
+	width: 220px;
+	border-bottom: 1px solid #FFF;
+}#contenido_interior #contenido .membresia .campo .col_02 input {
+	text-align: center;
+}
