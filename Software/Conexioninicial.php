@@ -25,7 +25,12 @@
             header("Location: Formulario.html ");
         }
         else
-            echo "Contraseña Erronea";
+       {
+            header("Location: Login.html");
+       }
+    }else
+    {
+        header("Location: Login.html");
     }
 
 ?>
