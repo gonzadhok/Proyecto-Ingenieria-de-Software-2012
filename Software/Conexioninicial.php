@@ -1,7 +1,4 @@
 <?php
-    $host="localhost";
-    $user="root";
-    $pw="map001358";
     
     include "Funciones.php";
     
