@@ -18,7 +18,7 @@
         
         
         //consulta
-        $querry="SELECT * FROM FUNCIONARIO WHERE rut=17601915 AND clave='1234'";
+        $querry="SELECT * FROM FUNCIONARIO WHERE rut=$usuario AND clave='$password'";
         $resultado=mysql_query($querry,$conexion);
         
         if(mysql_num_rows($resultado)==1)
