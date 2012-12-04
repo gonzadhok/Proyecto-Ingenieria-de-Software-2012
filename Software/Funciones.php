@@ -8,7 +8,7 @@ function mensajedeerror()
 {
 ?>
     <script>
-        alert ("Usuario y/o Contraseña mal ingresados\nIntente Nuevamente");
+        showDialog('Error','Usuario y/o Contraseña mal ingresados','error',2);
   </script>
 <?php
 }
