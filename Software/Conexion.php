@@ -20,6 +20,4 @@ foreach ($array as $selected) {
 echo "Datos Guardados correctamente";
  * 
  */
-header('Location: Login.html');
-echo "$_SERVER[HTTP_HOST]:$_SERVER[SERVER_PORT]$_SERVER[REQUEST_URI]";
 ?>

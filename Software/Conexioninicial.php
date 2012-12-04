@@ -21,7 +21,6 @@
         if(mysql_num_rows($querry)==1)
         {
             session_register("rut");
-            session_register("contraseña");
             header("Location: Formulario.html ");
         }
         else
