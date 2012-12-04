@@ -25,13 +25,13 @@
         }
         else
        {
-            menjase();
+            mensajedeerror();
             header("Location: Login.html");
             
        }
     }else
     {
-        menjase();
+        mensajedeerror();
         header("Location: Login.html");
         
     }

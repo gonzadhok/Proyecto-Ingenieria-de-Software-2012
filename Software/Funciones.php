@@ -4,10 +4,12 @@ $host = "localhost";
 $user = "software";
 $pw = "software";
 
-function menjase()
+function mensajedeerror()
 {
 ?>
-    Datos de Usuario mal ingresados intente otra vez
+    <script>
+        alert ("Usuario y/o Contraseña mal ingresados\nIntente Nuevamente");
+  </script>
 <?php
 }
 
