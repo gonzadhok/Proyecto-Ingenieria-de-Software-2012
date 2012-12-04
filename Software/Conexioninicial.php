@@ -20,16 +20,18 @@
         
         if(mysql_num_rows($querry)==1)
         {
-            session_register("rut");
-            header("Location: Formulario.html ");
+            session_register($_POST["rut"]);
+            header("Location: acceso.html ");
         }
         else
        {
             header("Location: Login.html");
+            menjase();
        }
     }else
     {
         header("Location: Login.html");
+        menjase();
     }
 
 ?>

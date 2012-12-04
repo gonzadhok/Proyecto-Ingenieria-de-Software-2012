@@ -4,6 +4,13 @@ $host = "localhost";
 $user = "software";
 $pw = "software";
 
+function menjase()
+{
+?>
+    Datos de Usuario mal ingresados intente otra vez
+<?php
+}
+
 
 function campovacio($campos,$nombrecampos,$url) {
     for ($i = 1; $i < count($nombrecampos); $i++) {
