@@ -11,7 +11,8 @@ function agregarNuevoPostulante($conexion, $informacion) {
             $agregar = "INSERT INTO ALUMNO_CARRERA VALUES ($informacion[rut],$opcion)";
             mysql_query($agregar, $conexion);
         }
-        echo '<META HTTP-EQUIV="REFRESH" CONTENT="5;URL=formulario.html">Datos Guardados correctamente';
+        echo '<script>alert("Formulario Guardado exitosamente")</script>';
+        echo '<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=formulario.html">';
     } elseif (count($opciones) < 0) {
         echo '<META HTTP-EQUIV="REFRESH" CONTENT="5;URL=formulario.html">Seleccione Carreras que desea cursar';
     } else {
