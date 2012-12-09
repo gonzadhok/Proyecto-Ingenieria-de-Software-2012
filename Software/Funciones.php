@@ -4,13 +4,47 @@ $host = "localhost";
 $user = "software";
 $pw = "software";
 
+function cabecera()
+{
+    echo "<tr><td width=\"25%\"><font face=\"verdana\">Rut</font></td>";
+        echo "<td width=\"25%\"><font face=\"verdana\">Nombre Completo</font></td>";
+        echo "<td width=\"25%\"><font face=\"verdana\">Comuna</font></td></tr>";
+        echo "<td width=\"25%\"><font face=\"verdana\">Telefono</font></td></tr>";
+        echo "<td width=\"25%\"><font face=\"verdana\">Correo</font></td></tr>";
+        echo "<td width=\"25%\"><font face=\"verdana\">Curso</font></td>";
+        echo "<td width=\"25%\"><font face=\"verdana\">Colegio</font></td></tr>";
+}
+
+function verDatos($conexion) {
+    $consultacarreras = "SELECT * FROM CARRERA";
+    $query = mysql_query($consultacarreras, $conexion);
+
+    while ($carreras = mysql_fetch_row($query)) {
+        $consulta = "SELECT a.* FROM ALUMNO a,ALUMNO_CARRERA ac WHERE ac.codigo=$carreras[codigo] AND ac.rut=a.rut";
+        $query1 = mysql_query($consulta, $conexion);
+
+        cabecera();
+
+        echo "Postulantes a carrera $carreras[nombre]";
+        while ($alumno = mysql_fetch_row($query1)) {
+            echo "<tr><td width=\"25%\"><font face=\"verdana\">$alumno[rut]</font></td>";
+            echo "<td width=\"25%\"><font face=\"verdana\">$alumno[nombre] $alumno[apellidop] $alumno[apellidom]</font></td>";
+            echo "<td width=\"25%\"><font face=\"verdana\">$alumno[comuna]</font></td></tr>";
+            echo "<td width=\"25%\"><font face=\"verdana\">$alumno[fono]</font></td></tr>";
+            echo "<td width=\"25%\"><font face=\"verdana\">$alumno[correo]</font></td></tr>";
+            echo "<td width=\"25%\"><font face=\"verdana\">$alumno[curso] Medio</font></td>";
+            echo "<td width=\"25%\"><font face=\"verdana\">$alumno[colegio]</font></td></tr>";
+        }
+    }
+}
+
 function mensajedeerror()
 {
-?>
-    <script languaje="Javascript">
-        showDialog('Error','Usuario y/o Contraseña mal ingresados','error',2);
-  </script>
-<?php
+
+    echo '<script languaje="Javascript">';
+    echo "showDialog('Error','Usuario y/o Contraseña mal ingresados','error',2);";
+    echo "</script>";
+
 }
 
 function buscarAlumno($rut,$conexion)

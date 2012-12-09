@@ -1,13 +1,7 @@
 <?php
-    
+
 include 'Funciones.php';
 
-$rut=0;
-
-function verDatos($conexion,$rut)
-{
-    
-}
 
 function agregarNuevoPostulante($conexion, $informacion) {
     $opciones = $informacion['CheckboxCarreras'];
@@ -26,13 +20,12 @@ function agregarNuevoPostulante($conexion, $informacion) {
     }
 }
 
-$conexion =mysql_connect($host, $user, $pw);
-mysql_select_db("base1", $conexion); 
+$conexion = mysql_connect($host, $user, $pw);
+mysql_select_db("base1", $conexion);
 
-switch($_POST["accion"])
-{
+switch ($_POST["accion"]) {
     case "1":
-        verDatos($conexion,$_POST["rut"]);
+        header("Location: vistapostulante.php"); 
         break;
     case "2":
         agregarNuevoPostulante($conexion, $_POST);
@@ -43,9 +36,4 @@ switch($_POST["accion"])
         echo '<META HTTP-EQUIV="REFRESH" CONTENT="1;URL=formulario.html">';
         break;
 }
-
-
-
-
-
 ?>
