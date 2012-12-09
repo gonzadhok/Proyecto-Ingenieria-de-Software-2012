@@ -2,28 +2,48 @@
     
 include 'Funciones.php';
 
- 
+$rut=0;
+
+function verDatos($conexion,$rut)
+{
+    
+}
+
+function agregarNuevoPostulante($conexion, $informacion) {
+    $opciones = $informacion['CheckboxCarreras'];
+    if (!buscarAlumno($informacion["rut"], $conexion) && count($opciones) > 0) {
+        $datos = "$informacion[rut],'$informacion[nombre]','$informacion[apellido_paterno]','$informacion[apellido_materno]',$informacion[curso],'$informacion[colegio]','$informacion[comuna]',$informacion[telefono],'$informacion[correo]',NOW()";
+        mysql_query("INSERT INTO ALUMNO VALUES($datos)", $conexion) or die('<META HTTP-EQUIV="REFRESH" CONTENT="5;URL=formulario.html">Datos mal ingresados');
+        foreach ($opciones as $opcion) {
+            $agregar = "INSERT INTO ALUMNO_CARRERA VALUES ($informacion[rut],$opcion)";
+            mysql_query($agregar, $conexion);
+        }
+        echo '<META HTTP-EQUIV="REFRESH" CONTENT="5;URL=formulario.html">Datos Guardados correctamente';
+    } elseif (count($opciones) < 0) {
+        echo '<META HTTP-EQUIV="REFRESH" CONTENT="5;URL=formulario.html">Seleccione Carreras que desea cursar';
+    } else {
+        echo '<META HTTP-EQUIV="REFRESH" CONTENT="5;URL=formulario.html">El postulante ya se encuentra en la base de datos';
+    }
+}
 
 $conexion =mysql_connect($host, $user, $pw);
 mysql_select_db("base1", $conexion); 
 
-$opciones = $_POST['CheckboxCarreras'];
-
-if(!buscarAlumno($_POST["rut"],$conexion) && count($opciones)>0)
+switch($_POST["accion"])
 {
-    $datos="$_POST[rut],'$_POST[nombre]','$_POST[apellido_paterno]','$_POST[apellido_materno]',$_POST[curso],'$_POST[colegio]','$_POST[comuna]',$_POST[telefono],'$_POST[correo]',NOW()";
-    mysql_query("INSERT INTO ALUMNO VALUES($datos)",$conexion) or die('<META HTTP-EQUIV="REFRESH" CONTENT="5;URL=formulario.html">Datos mal ingresados'); 
-    foreach ($opciones as $opcion) {
-    $agregar = "INSERT INTO ALUMNO_CARRERA VALUES ($_POST[rut],$opcion)";
-    mysql_query($agregar,$conexion);
-    }
-    echo '<META HTTP-EQUIV="REFRESH" CONTENT="5;URL=formulario.html">Datos Guardados correctamente';
-}elseif(count($opciones)<0)
-{
-    echo '<META HTTP-EQUIV="REFRESH" CONTENT="5;URL=formulario.html">Seleccione Carreras que desea cursar';
-}  else {
-    echo '<META HTTP-EQUIV="REFRESH" CONTENT="5;URL=formulario.html">El postulante ya se encuentra en la base de datos';
+    case "1":
+        verDatos($conexion,$_POST["rut"]);
+        break;
+    case "2":
+        agregarNuevoPostulante($conexion, $_POST);
+        break;
+    case "3":
+        break;
+    default:
+        echo '<META HTTP-EQUIV="REFRESH" CONTENT="1;URL=formulario.html">';
+        break;
 }
+
 
 
 
