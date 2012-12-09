@@ -4,13 +4,14 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Formulario</title>
         <LINK href='style.css' type=text/css rel=stylesheet>
+        <script type="text/javascript" src="validacion.js"></script>
 </head>
 <body>
      <form name="menu">
         <ul>
             <a target="_self" href="linkeo 3"><span style="color: #ffffff;">Inicio</span></a>
             <a class="separador"><span style="color: darkblue">||||||||||||||</span></a>
-            <a target="_self" href="formulario.html"><span style="color: #ffffff;">Postulantes</span></a>
+            <a target="_self" href="prinicpal"><span style="color: #ffffff;">Postulantes</span></a>
             <a class="separador"><span style="color: darkblue;">||||||||||||||</span></a>
             <a class="separador"><span style="color: darkblue;">||||||||||||||</span></a> 
             <a target="_self" href="Login.html"><span style="color: #ffffff;">cerrar sesion</span></a>
@@ -25,37 +26,32 @@
                 <p>&nbsp;</p>
                 <form action="Conexion.php" name="form" method="post" >
                     <p>
-                         <select name="accion" size="1">
-                            <option value="1" >Ver Datos</option>
-                            <option value="2">Ingresar Nuevo</option>
-                            <option value="3">Modificar</option>
-                        </select>
                         <table width="479" border="1">
                             <tr>
                                 <td width="242"><p>
                                         <label for="rut">Rut:<br />
                                         </label>
-                                        <input type="text" name="rut" id="rut" value=""/>
+                                        <input name="rut" type="text" id="rut" maxlength="9" onkeypress="return soloNumyk(event)" />
                                     </p>
                                     <p>
                                         <label for="nombre">Nombre: <br />
                                         </label>
-                                        <input type="text" name="nombre"/>
+                                        <input name="nombre" type="text" maxlength="20" onkeypress="return soloLetras(event)"/>
                                     </p>
                                     <p>
                                         <label for="apellido_paterno">Apellido Paterno: <br />
                                         </label>
-                                        <input name="apellido_paterno" type="text" />
+                                        <input name="apellido_paterno" type="text" maxlength="10" onkeypress="return soloLetras(event)"  />
                                     </p>
                                     <p>
                                         <label for="apellido_materno">Apellido Materno: <br />
                                         </label>
-                                        <input name="apellido_materno" type="text" />
+                                        <input name="apellido_materno" type="text" maxlength="10" onkeypress="return soloLetras(event)"/>
                                     </p>
                                     <p>
                                         <label for="comuna">Comuna :<br />
                                         </label>
-                                        <input type="text" name="comuna"/>
+                                        <input name="comuna" type="text" maxlength="20" onkeypress="return soloLetras(event)"/>
                                         <br>
                                         </br>
                                     </p></td>
@@ -63,20 +59,20 @@
                                     <p>
                                         <label for="curso">Curso:<br />
                                         </label>
-                                        <input type="text" name="curso"/>
+                                        <input name="curso" type="text" maxlength="1"  onkeypress="return soloNum(event)"/>
                                     </p>
                                     <p>
                                         <label for="colegio">Colegio:<br />
                                         </label>
-                                        <input type="text" name="colegio"/>
+                                        <input name="colegio" type="text" maxlength="30"/>
                                     </p>
                                     <p>
                                         <label for="correo">Correo:<br /> </label>
-                                        <input type="text" name="correo"/>
+                                        <input name="correo" type="text" maxlength="30"/>
                                     </p>
                                     <p>
                                         <label for="telefono">Telefono:<br /></label> 
-                                        <input type="text" name="telefono"/>
+                                        <input name="telefono" type="text" maxlength="10"  onkeypress="return soloNumyk(event)"/>
                                     </p></td>
                             </tr>
                             <tr>
@@ -192,6 +188,7 @@
                         <p>
                             <p align="center">
                                 <input type="submit"  name="button"  value="Enviar" />
+                                <input type="submit"  name="button1"  value="Volver" href="principal.html" />
                                 <p>
                                     <h3 align="center">&nbsp;</h3>
                                     <p align="center">&nbsp;</p>

@@ -3,6 +3,8 @@
     <head>
         <LINK href='style.css' type=text/css rel=stylesheet>
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <script type="text/javascript" src="validacion.js"></script>
+            
             <title>conectar</title>
     </head>
     <div id="contenido_interior">
@@ -12,13 +14,13 @@
                 <form id="form1" name="form1" method="POST" action="Conexioninicial.php">
                     <p>
                         <label for="rut">Rut:</label>
-                        <input type="text" name="rut" id="rut" />
-                        <label for="digitoverificador">-</label>
-                        <input type="text" name="digitoverificador" id="digitoverificador" />
+                        <input name="rut" type="text" id="rut" size="8" maxlength="8" onkeypress="return soloNum(event)" />
+                        <label for="digitoverificador" >-</label>
+                        <input name="digitoverificador" type="text" id="digitoverificador" onkeypress="return soloNumyk(event)" size="1" maxlength="1" />
                     </p>
                     <p>
                         <label for="contraseña">Password</label>
-                        <input type="password" name="contraseña" id="contraseña" />
+                        <input name="contraseña" type="password" id="contraseña" size="10" />
                     </p>
                     <p>
                         <input type="submit" name="button" id="button" value="Enviar" />
