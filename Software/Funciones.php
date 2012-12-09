@@ -13,26 +13,16 @@ function mensajedeerror()
 <?php
 }
 
-
-function campovacio($campos,$nombrecampos,$url) {
-    for ($i = 1; $i < count($nombrecampos); $i++) {
-        if (empty($campos[$nombrecampos[$i]])) {
-            header($url);
-        }
-    }
-}
-
-function conectar()
+function buscarAlumno($rut,$conexion)
 {
-    $con = mysql_connect($host, $user, $pw);
-    mysql_select_db("base1", $con);
-    return $con;
+    $resultado=mysql_query("SELECT * FROM ALUMNO WHERE rut=$rut",$conexion);
+    if(mysql_num_rows($resultado)>0)
+        return true;
+    else 
+        return false;
+        
 }
 
-function desconectar($con)
-{
-    mysql_close($con);
-}
 
 function validarrut($rut,$digito)
  {

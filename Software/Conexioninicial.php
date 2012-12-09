@@ -5,8 +5,8 @@
     if(!empty($_POST['rut']) && !validarrut($_POST["rut"],$_POST["digitoverificador"]))
     {
         //conexion con base de datos
-        $conexion = conectar();
-                        
+        $conexion = mysql_connect($host, $user, $pw);
+        mysql_select_db("base1", $conexion);
         //sentencias para evitar SQLINJECTION
         $usuario=$_POST["rut"];
         $password=$_POST["contraseña"];
@@ -20,11 +20,11 @@
         //consulta a base de datos
         $querry="SELECT * FROM FUNCIONARIO WHERE rut=$usuario AND clave='$password'";
         $resultado=mysql_query($querry,$conexion);
-        
+        echo  mysql_num_rows($resultado);
         if(mysql_num_rows($resultado)==1)
         {
-            $_SESSION[$usuario]=$password;
-            header("Location: Formulario.php");
+            header("Location: Formulario.html");
+
         }
         else
        {

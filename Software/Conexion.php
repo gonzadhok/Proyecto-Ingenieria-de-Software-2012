@@ -2,22 +2,30 @@
     
 include 'Funciones.php';
 
-/*campovacio($_POST);
-$con = conectar(); 
+ 
 
+$conexion =mysql_connect($host, $user, $pw);
+mysql_select_db("base1", $conexion); 
 
-$consulta = "INSERT INTO ALUMNO VALUES($_POST[textfield2],'$_POST[textfield1]','$_POST[textfield8]','$_POST[textfield16]',$_POST[textfield5],'$_POST[textfield4]',"
-        . "'$_POST[textfield3]',$_POST[textfield7],'$_POST[textfield6]',NOW())";
-mysql_query($consulta, $con) or die("El postulante ya esta ingresado en los registros");
+$opciones = $_POST['CheckboxCarreras'];
 
-$array = $_POST['CheckboxCarreras'];
-
-foreach ($array as $selected) {
-    $consulta = "INSERT INTO ALUMNO_CARRERA VALUES ($_POST[rut],$selected)";
-    mysql_query($consulta, $con);
+if(!buscarAlumno($_POST["rut"],$conexion) && count($opciones)>0)
+{
+    $datos="$_POST[rut],'$_POST[nombre]','$_POST[apellido_paterno]','$_POST[apellido_materno]',$_POST[curso],'$_POST[colegio]','$_POST[comuna]',$_POST[telefono],'$_POST[correo]',NOW()";
+    mysql_query("INSERT INTO ALUMNO VALUES($datos)",$conexion) or die('<META HTTP-EQUIV="REFRESH" CONTENT="5;URL=formulario.html">Datos mal ingresados'); 
+    foreach ($opciones as $opcion) {
+    $agregar = "INSERT INTO ALUMNO_CARRERA VALUES ($_POST[rut],$opcion)";
+    mysql_query($agregar,$conexion);
+    }
+    echo '<META HTTP-EQUIV="REFRESH" CONTENT="5;URL=formulario.html">Datos Guardados correctamente';
+}elseif(count($opciones)<0)
+{
+    echo '<META HTTP-EQUIV="REFRESH" CONTENT="5;URL=formulario.html">Seleccione Carreras que desea cursar';
+}  else {
+    echo '<META HTTP-EQUIV="REFRESH" CONTENT="5;URL=formulario.html">El postulante ya se encuentra en la base de datos';
 }
 
-echo "Datos Guardados correctamente";
- * 
- */
+
+
+
 ?>
