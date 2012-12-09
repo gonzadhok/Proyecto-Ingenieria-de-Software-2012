@@ -37,7 +37,8 @@ function verDatos($conexion) {
 }
 
 function mensajedeerror() {
-    echo '<script>showDialog("Error","Usuario y/o Contraseña mal ingresados","error",2);</script>';
+    echo '<script>alert("Usuario y/o Contraseña mal ingresados");</script>';
+
 }
 
 function buscarAlumno($rut, $conexion) {
@@ -50,10 +51,8 @@ function buscarAlumno($rut, $conexion) {
 
 function validarrut($rut, $digito) {
     $rut = intval($rut);
-    if ($rut != 0 && preg_match("0-9kK", $digito)) {
-        if(preg_match("0-9", $digito))
-            $digito = intvar($digito);
-        
+    if ($rut != 0 && preg_match("0-9 kK", $digito)) {
+        $digito = intvar($digito);
 
         $multiplicador = 2;
         $verificador = 0;
@@ -62,7 +61,7 @@ function validarrut($rut, $digito) {
             $modulo = $rut % 10;
             if ($multiplicador > 7)
                 $multiplicador = 2;
-            $verificador += $modulo * $multiplicador;
+            $aux3 += $modulo * $aux2;
             $multiplicador++;
             $rut = ($rut - $modulo) / 10;
         } while ($rut != 0);
