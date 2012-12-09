@@ -20,7 +20,7 @@ function modificarPostulante($conexion, $informacion) {
         echo '<script>alert("Datos Agregados Correctamente")</script>';
         echo '<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=formulario.html">';
     }else {
-        echo '<script>alert("El postulante no se encuentra en la base de datos")</script>';
+        echo '<script>alert("El postulante no se encuentra ingresado")</script>';
         echo '<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=formulario.html">';
     }
     
