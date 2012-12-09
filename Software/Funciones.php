@@ -37,8 +37,7 @@ function verDatos($conexion) {
 }
 
 function mensajedeerror() {
-    echo '<script>alert("Usuario y/o Contraseña mal ingresados");</script>';
-
+    echo '<script>alert("Usuario y/o Contraseña mal ingresados")</script>';
 }
 
 function buscarAlumno($rut, $conexion) {
@@ -50,38 +49,39 @@ function buscarAlumno($rut, $conexion) {
 }
 
 function validarrut($rut, $digito) {
-    $rut = intval($rut);
-    if ($rut != 0 && preg_match("0-9 kK", $digito)) {
-        $digito = intvar($digito);
-
-        $multiplicador = 2;
-        $verificador = 0;
-
-        do {
-            $modulo = $rut % 10;
-            if ($multiplicador > 7)
+            $rut = intval($rut);
+            
+            if ($rut != 0 && (intval($digito)>0 || (intval($digito)==0 && $digito=="0") || $digito=="k" ||$digito=="K")) {
+                
                 $multiplicador = 2;
-            $aux3 += $modulo * $aux2;
-            $multiplicador++;
-            $rut = ($rut - $modulo) / 10;
-        } while ($rut != 0);
+                $verificador = 0;
 
-        $verificador = 11 - ($verificador % 11); //calculo de guion
+                do {
+                    $modulo = $rut % 10;
+                    if ($multiplicador > 7)
+                        $multiplicador = 2;
+                    $verificador += $modulo * $multiplicador;
+                    $multiplicador++;
+                    $rut = ($rut - $modulo) / 10;
+                } while ($rut != 0);
 
-        switch ($verificador) {
-            case 11: $verificador = 0;
-                break;
-            case 10: $verificador = "k";
-                break;
-        }
+                $verificador = 11 - ($verificador % 11); //calculo de guion
 
-        if ($verificador == $digito) {
-            return true;
-        } else {
-            return false;
-        }
-    }else
-        return false;
+                switch ($verificador) {
+                    case 11: $verificador = 0;
+                        break;
+                    case 10: $verificador = "k";
+                        break;
+                }
+                
+                if ($verificador == intval($digito))
+                    return true;
+                elseif ($verificador == "k" && ($digito == "K" || $digito == "k"))
+                    return true;
+                else
+                    return false;
+            }else
+                return false;
 }
 
 function formulario($rut) {

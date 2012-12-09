@@ -2,7 +2,7 @@
     
     include "Funciones.php";
     
-    if(!empty($_POST['rut']) && !validarrut($_POST["rut"],$_POST["digitoverificador"]))
+    if(!empty($_POST['rut']) && validarrut($_POST["rut"],$_POST["digitoverificador"]))
     {
         //conexion con base de datos
         $conexion = mysql_connect($host, $user, $pw);

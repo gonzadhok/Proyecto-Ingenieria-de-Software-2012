@@ -6,7 +6,7 @@ function agregarNuevoPostulante($conexion, $informacion) {
     $opciones = $informacion["CheckboxCarreras"];
     if (!buscarAlumno($informacion["rut"], $conexion) && count($opciones) > 0) {
         $datos = "$informacion[rut],'$informacion[nombre]','$informacion[apellido_paterno]','$informacion[apellido_materno]',$informacion[curso],'$informacion[colegio]','$informacion[comuna]',$informacion[telefono],'$informacion[correo]',NOW()";
-        mysql_query("INSERT INTO ALUMNO VALUES($datos)", $conexion) or die('<META HTTP-EQUIV="REFRESH" CONTENT="5;URL=formulario.html">Datos mal ingresados');
+        mysql_query("INSERT INTO ALUMNO VALUES($datos)", $conexion) or die('<script>alert("Datos Mal Ingresados")</script><META HTTP-EQUIV="REFRESH" CONTENT="0;URL=formulario.html">');
         foreach ($opciones as $opcion) {
             $agregar = "INSERT INTO ALUMNO_CARRERA VALUES ($informacion[rut],$opcion)";
             echo $agregar;

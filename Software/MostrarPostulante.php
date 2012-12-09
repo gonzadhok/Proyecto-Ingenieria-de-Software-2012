@@ -33,7 +33,7 @@
                             verDatos($conexion);
                             ?>
                             <p>
-                                <input type="submit" name="button" id="button" value="Exportar a plantilla de calculo"/>
+                                <input type="submit" name="button" id="button" value="Exportar .xls"/>
                                 <input type="submit" name="button" id="button" value="Volver"/>
                             </p>
                         </p>
