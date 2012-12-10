@@ -23,7 +23,7 @@
         echo  mysql_num_rows($resultado);
         if(mysql_num_rows($resultado)==1)
         {
-            header("Location: Formulario.html");
+            header("Location: principal.html");
 
         }
         else
