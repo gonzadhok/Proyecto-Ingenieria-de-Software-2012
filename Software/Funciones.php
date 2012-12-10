@@ -1,38 +1,26 @@
 <?php
+
 $host = "localhost";
 $user = "software";
 $pw = "software";
-
-function cabecera() {
-    echo "<tr><td width=\"25%\"><font face=\"verdana\">Rut</font></td>";
-    echo "<td width=\"25%\"><font face=\"verdana\">Nombre Completo</font></td>";
-    echo "<td width=\"25%\"><font face=\"verdana\">Comuna</font></td></tr>";
-    echo "<td width=\"25%\"><font face=\"verdana\">Telefono</font></td></tr>";
-    echo "<td width=\"25%\"><font face=\"verdana\">Correo</font></td></tr>";
-    echo "<td width=\"25%\"><font face=\"verdana\">Curso</font></td>";
-    echo "<td width=\"25%\"><font face=\"verdana\">Colegio</font></td></tr>";
-}
 
 function verDatos($conexion) {
     $consultacarreras = "SELECT * FROM CARRERA";
     $query = mysql_query($consultacarreras, $conexion);
 
-    while ($carreras = mysql_fetch_row($query)) {
-        $consulta = "SELECT a.* FROM ALUMNO a,ALUMNO_CARRERA ac WHERE ac.codigo=$carreras[codigo] AND ac.rut=a.rut";
+    while ($carreras = mysql_fetch_array($query)) {
+        $consulta = "SELECT a.* FROM ALUMNO a,ALUMNO_CARRERA ac WHERE ac.codigo='$carreras[codigo]' AND ac.rut=a.rut";
         $query1 = mysql_query($consulta, $conexion);
 
-        cabecera();
+        echo "Postulantes a carrera $carreras[nombre]<br><br><br>";
 
-        echo "Postulantes a carrera $carreras[nombre]";
-        while ($alumno = mysql_fetch_row($query1)) {
-            echo "<tr><td width=\"25%\"><font face=\"verdana\">$alumno[rut]</font></td>";
-            echo "<td width=\"25%\"><font face=\"verdana\">$alumno[nombre] $alumno[apellidop] $alumno[apellidom]</font></td>";
-            echo "<td width=\"25%\"><font face=\"verdana\">$alumno[comuna]</font></td></tr>";
-            echo "<td width=\"25%\"><font face=\"verdana\">$alumno[fono]</font></td></tr>";
-            echo "<td width=\"25%\"><font face=\"verdana\">$alumno[correo]</font></td></tr>";
-            echo "<td width=\"25%\"><font face=\"verdana\">$alumno[curso] Medio</font></td>";
-            echo "<td width=\"25%\"><font face=\"verdana\">$alumno[colegio]</font></td></tr>";
+
+        echo "<table><tr><th>Rut</th><th>"; //Nombre Completo</th><th>Comuna</th></tr><th>Telefono</th><th>Curso</th><th>Correo</th></tr>";
+//aca se cargan los datos y se ponen los botones de opciones (eliminar/modificar)
+        while ($fila = mysql_fetch_array($query1)) {
+            echo '<tr><td><input type="text" readonly="yes" name="Rut" value="'.$fila["rut"].'"></td></tr>';
         }
+        echo "</table><br><br>";
     }
 }
 
@@ -49,39 +37,39 @@ function buscarAlumno($rut, $conexion) {
 }
 
 function validarrut($rut, $digito) {
-            $rut = intval($rut);
-            
-            if ($rut != 0 && (intval($digito)>0 || (intval($digito)==0 && $digito=="0") || $digito=="k" ||$digito=="K")) {
-                
+    $rut = intval($rut);
+
+    if ($rut != 0 && (intval($digito) > 0 || (intval($digito) == 0 && $digito == "0") || $digito == "k" || $digito == "K")) {
+
+        $multiplicador = 2;
+        $verificador = 0;
+
+        do {
+            $modulo = $rut % 10;
+            if ($multiplicador > 7)
                 $multiplicador = 2;
-                $verificador = 0;
+            $verificador += $modulo * $multiplicador;
+            $multiplicador++;
+            $rut = ($rut - $modulo) / 10;
+        } while ($rut != 0);
 
-                do {
-                    $modulo = $rut % 10;
-                    if ($multiplicador > 7)
-                        $multiplicador = 2;
-                    $verificador += $modulo * $multiplicador;
-                    $multiplicador++;
-                    $rut = ($rut - $modulo) / 10;
-                } while ($rut != 0);
+        $verificador = 11 - ($verificador % 11); //calculo de guion
 
-                $verificador = 11 - ($verificador % 11); //calculo de guion
+        switch ($verificador) {
+            case 11: $verificador = 0;
+                break;
+            case 10: $verificador = "k";
+                break;
+        }
 
-                switch ($verificador) {
-                    case 11: $verificador = 0;
-                        break;
-                    case 10: $verificador = "k";
-                        break;
-                }
-                
-                if ($verificador == intval($digito))
-                    return true;
-                elseif ($verificador == "k" && ($digito == "K" || $digito == "k"))
-                    return true;
-                else
-                    return false;
-            }else
-                return false;
+        if ($verificador == intval($digito))
+            return true;
+        elseif ($verificador == "k" && ($digito == "K" || $digito == "k"))
+            return true;
+        else
+            return false;
+    }else
+        return false;
 }
 
 function formulario($rut) {
@@ -94,11 +82,9 @@ function formulario($rut) {
     $alumnos = mysql_query($consultadatos, $conexion);
     $carreras = mysql_query($consultacarreras, $conexion);
 
-    if ($alumno = mysql_fetch_row($alumnos)) 
-    {
+    if ($alumno = mysql_fetch_row($alumnos)) {
         
-    }else
-    {
+    } else {
         
     }
 }

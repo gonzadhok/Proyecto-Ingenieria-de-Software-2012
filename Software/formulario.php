@@ -36,7 +36,7 @@
                         <ul>
                             <a target="_self" href="linkeo 3"><span style="color: #ffffff;">Inicio</span></a>
                             <a class="separador"><span style="color: darkblue">||||||||||||||</span></a>
-                            <a target="_self" href="prinicpal"><span style="color: #ffffff;">Postulantes</span></a>
+                            <a target="_self" href="principal.html"><span style="color: #ffffff;">Postulantes</span></a>
                             <a class="separador"><span style="color: darkblue;">||||||||||||||</span></a>
                             <a class="separador"><span style="color: darkblue;">||||||||||||||</span></a> 
                             <a target="_self" href="Login.html"><span style="color: #ffffff;">cerrar sesion</span></a>
@@ -48,7 +48,7 @@
                             <h1>Inscríbete para recibir informacion de tu carrera</h1>
                             <p>
                                 <p>&nbsp;</p>
-                                <form action="Conexion.php" name="form" method="post" >
+                                <form action="postulante_modificar.php" name="form" method="post" >
                                     <p>
                                         <table width="479" border="1">
                                             <tr>
