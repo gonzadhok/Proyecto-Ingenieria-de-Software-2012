@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="style.css" type="text/css"
+<LINK href='style.css' type=text/css rel=stylesheet>
+<script type="text/javascript" src="validacion.js"></script>
+<title>Ingenieria en sosftware</title>
+</head>
+
+<body>
+<div id="contenido_interior">
+	<div id="contenido">
+    <h1>Valores a modificar</h1>
+     <div id="contenido_interior">
+<form action="" method="get">
+<table width="479" border="1">
+                            <tr>
+                                <td width="242"><p>
+                                        <label for="rut">Rut:<br />
+                                        </label>
+                                        <input name="rut" type="text" id="rut" onkeypress="return soloNumyk(event)" maxlength="9" readonly="readonly" />
+                                    </p>
+                                    <p>
+                                        <label for="nombre">Nombre: <br />
+                                        </label>
+                                        <input name="nombre" type="text" maxlength="20" onkeypress="return soloLetras(event)"/>
+                                    </p>
+                                    <p>
+                                        <label for="apellido_paterno">Apellido Paterno: <br />
+                                        </label>
+                                        <input name="apellido_paterno" type="text" maxlength="10" onkeypress="return soloLetras(event)"  />
+                                    </p>
+                                    <p>
+                                        <label for="apellido_materno">Apellido Materno: <br />
+                                        </label>
+                                        <input name="apellido_materno" type="text" maxlength="10" onkeypress="return soloLetras(event)"/>
+                                    </p>
+                                    <p>
+                                        <label for="comuna">Comuna :<br />
+                                        </label>
+                                        <input name="comuna" type="text" maxlength="20" onkeypress="return soloLetras(event)"/>
+                                        <br>
+                                        </br>
+                                    </p></td>
+                                <td width="199">
+                                    <p>
+                                        <label for="correo">Correo:<br /> </label>
+                                        <input name="correo" type="text" maxlength="30"/>
+                                    </p>
+                                    <p>
+                                        <label for="telefono">Telefono:<br /></label> 
+                                        <input name="telefono" type="text" maxlength="10"  onkeypress="return soloNumyk(event)"/>
+                                    </p>
+                                    <p>
+                                        <label for="apellido_materno">Tipo: <br />
+                                        </label>
+                                        <input name="tipofunc" type="text" maxlength="10" onkeypress="return soloLetras(event)"/>
+                                    </p>
+                                    
+                                    <input type="submit" name="buscar" id="buscar" value="Modificar" /></td>
+</form>
+</div>
+</div>
+</div>
+</body> 
+</html>

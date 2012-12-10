@@ -23,7 +23,7 @@
                 <h1>Postulantes Inscritos</h1>
                 <p>
                     <p>&nbsp;</p>
-                    <form action="" name="form" method="" >
+                    <form action="?" name="form" method="POST" >
                         <p>
                             <?php
                             include 'Funciones.php';
@@ -31,10 +31,15 @@
                             mysql_select_db("base1", $conexion);
 
                             verDatos($conexion);
+                            
+                            if(isset($_POST["Exportar .xls"]))
+                            {
+                                
+                            }
                             ?>
                             <p>
                                 <input type="submit" name="button" id="button" value="Exportar .xls"/>
-                                <input type="submit" name="button" id="button" value="Volver"/>
+                                <input type="submit" name="button" id="button" value="Volver" href="principal.html"/>
                             </p>
                         </p>
                     </form>
