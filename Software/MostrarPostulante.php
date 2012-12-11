@@ -27,13 +27,15 @@
                     <p>
                         <?php
                         include 'Funciones.php';
+                        
                         $conexion = mysql_connect($host, $user, $pw);
                         mysql_select_db("base1", $conexion);
 
                         verDatos($conexion);
 
                         if (isset($_POST["button"]) && count($_POST["CheckboxCarreras"]) > 0) {
-                            crearExcel($_POST, $conexion);
+                            foreach($_POST["CheckboxCarreras"] as $codigo)
+                            header("Location: Excel.php?info=$codigo");
                         }
                         ?>
                         <p>
