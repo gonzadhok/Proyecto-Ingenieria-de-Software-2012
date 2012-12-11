@@ -15,10 +15,15 @@ function verDatos($conexion) {
         echo '<label><input type="checkbox" name="CheckboxCarreras[]" value="' . $carreras["codigo"] . '"></label>' . $carreras["nombre"] . '</label><br />';
 
 
-        echo "<table><tr><th>Rut</th><th>"; //Nombre Completo</th><th>Comuna</th></tr><th>Telefono</th><th>Curso</th><th>Correo</th></tr>";
+        echo "<table><tr><th>Rut</th><th>Nombre Completo</th><th>Correo</th><th>Telefono</th><th>Colegio</th><th>Curso</th></tr><th>"; //Nombre Completo</th><th>Comuna</th></tr><th>Telefono</th><th>Curso</th><th>Correo</th></tr>";
 //aca se cargan los datos y se ponen los botones de opciones (eliminar/modificar)
         while ($fila = mysql_fetch_array($query1)) {
             echo '<tr><td><input type="text" readonly="yes" name="Rut" value="'.$fila["rut"].'"></td></tr>';
+			echo '<tr><td><input type="text" readonly="yes" name="nombre" value="'."$fila[nombre] $fila[apellidop] $fila[apellidom]".'"></td></tr>';
+			echo '<tr><td><input type="text" readonly="yes" name="correo" value="'.$fila["correo"].'"></td></tr>';
+			echo '<tr><td><input type="text" readonly="yes" name="telefono" value="'.$fila["fono"].'"></td></tr>';
+			echo '<tr><td><input type="text" readonly="yes" name="colegio" value="'.$fila["colegio"].'"></td></tr>';
+			echo '<tr><td><input type="text" readonly="yes" name="curso" value="'."$fila[curso] Medio".'"></td></tr>';
         }
         echo "</table><br><br>";
     }
