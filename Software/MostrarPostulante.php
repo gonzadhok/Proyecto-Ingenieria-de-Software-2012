@@ -7,15 +7,16 @@
 </head>
 <body>
     <form name="menu">
-        <ul>
-            <a target="_self" href="linkeo 3"><span style="color: #ffffff;">Inicio</span></a>
-            <a class="separador"><span style="color: darkblue">||||||||||||||</span></a>
-            <a target="_self" href="principal.html"><span style="color: #ffffff;">Postulantes</span></a>
-            <a class="separador"><span style="color: darkblue;">||||||||||||||</span></a>
-            <a class="separador"><span style="color: darkblue;">||||||||||||||</span></a> 
-            <a target="_self" href="Login.html"><span style="color: #ffffff;">cerrar sesion</span></a>
-        </ul>
-    </form>
+<ul>
+<a target="_self" href="linkeo 3"><span style="color: #ffffff;">Inicio</span></a>
+<a class="separador"><span style="color: darkblue">||||||||||||||</span></a>
+<a target="_self" href="principal.html"><span style="color: #ffffff;">Postulantes</span></a>
+<a class="separador"><span style="color: darkblue;">||||||||||||||</span></a>
+<a target="_self" href="funcionarios.php"><span style="color: #ffffff;">Funcionarios</span></a>
+<a class="separador"><span style="color: darkblue;">||||||||||||||</span></a>
+<a target="_self" href="Login.html"><span style="color: #ffffff;">cerrar sesion</span></a>
+</ul>
+</form>
 
 
     <div id="contenido_interior">

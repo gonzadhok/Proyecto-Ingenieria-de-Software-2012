@@ -9,13 +9,17 @@
 <body>
      <form name="menu">
         <ul>
-            <a target="_self" href="linkeo 3"><span style="color: #ffffff;">Inicio</span></a>
-            <a class="separador"><span style="color: darkblue">||||||||||||||</span></a>
-            <a target="_self" href="principal.html"><span style="color: #ffffff;">Postulantes</span></a>
-            <a class="separador"><span style="color: darkblue;">||||||||||||||</span></a>
-            <a target="_self" href="datosfuncionarios.html"><span style="color: #ffffff;">Funcionarios</span></a>
-            <a class="separador"><span style="color: darkblue;">||||||||||||||</span></a> 
-            <a target="_self" href="Login.html"><span style="color: #ffffff;">cerrar sesion</span></a>
+            <form name="menu">
+<ul>
+<a target="_self" href="linkeo 3"><span style="color: #ffffff;">Inicio</span></a>
+<a class="separador"><span style="color: darkblue">||||||||||||||</span></a>
+<a target="_self" href="principal.html"><span style="color: #ffffff;">Postulantes</span></a>
+<a class="separador"><span style="color: darkblue;">||||||||||||||</span></a>
+<a target="_self" href="funcionarios.php"><span style="color: #ffffff;">Funcionarios</span></a>
+<a class="separador"><span style="color: darkblue;">||||||||||||||</span></a>
+<a target="_self" href="Login.html"><span style="color: #ffffff;">cerrar sesion</span></a>
+</ul>
+</form>
         </ul>
     </form>
 
@@ -25,14 +29,14 @@
             <h1>Inscríbete para recibir informacion de tu carrera</h1>
             <p>
                 <p>&nbsp;</p>
-                <form action="Conexion.php" name="form" method="post" >
+                <form action="Conexion.php" name="form" method="post" onSubmit="javascript:return Rut(document.form1.rut.value)" >
                     <p>
                         <table width="479" border="1">
                             <tr>
                                 <td width="242"><p>
                                         <label for="rut">Rut:<br />
                                         </label>
-                                        <input name="rut" type="text" id="rut" maxlength="9" onkeypress="return soloNumyk(event)" />
+                                        <input name="rut" type="text" id="rut" maxlength="12" onkeypress="return soloNumyk(event)" />
                                     </p>
                                     <p>
                                         <label for="nombre">Nombre: <br />
@@ -129,13 +133,16 @@
                                     <br />
                                     <label>
                                         <input type="checkbox" name="CheckboxCarreras[]" value="21048" id="CheckboxCarreras_11" />
-                                        Ing. Comercial</label></td>
+                                        Ing. Comercial</label>
+									<br />
                                     <label>
                                         <input type="checkbox" name="CheckboxCarreras[]" value="21083" id="CheckboxCarreras_11" />
-                                        Química Industrial</label></td>   
+                                        Química Industrial</label>
+									<br />
                                     <label>
                                         <input type="checkbox" name="CheckboxCarreras[]" value="21043" id="CheckboxCarreras_11" />
-                                        Trabajo Social</label></td>
+                                        Trabajo Social</label>
+									</td>
                                 <td>
                                     <label>  
                                         <input type="checkbox" name="CheckboxCarreras[]" value="21015" id="CheckboxCarreras_12" />
@@ -183,7 +190,7 @@
                                     <br />
                                     <label>
                                         <input type="checkbox" name="CheckboxCarreras[]" value="21042" id="CheckboxCarreras_23" />
-                                        Ing. en Prevención de Riesgos y Medio Ambiente</label>
+                                        Ing. en Prevención de Riesgos </label>
                                     <br />
                                     <label>
                                         <input type="checkbox" name="CheckboxCarreras[]" value="21080" id="CheckboxCarreras_24" />
